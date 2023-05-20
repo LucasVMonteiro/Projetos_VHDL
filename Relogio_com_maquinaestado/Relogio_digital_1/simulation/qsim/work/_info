@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vieir\OneDrive\Documentos\MEGAsync Downloads\Engenharia Eletrica\Projetos_MM_2023\Relogio_digital_1\simulation\qsim
+vBLOCO_CONTADOR23
+Z1 IzAbbh2WgJLU[FXocW4R>O1
+Z2 VePKf3c[]B4o][EkYj^kQ;1
+Z3 dC:\Users\vieir\OneDrive\Documentos\MEGAsync Downloads\Engenharia Eletrica\Projetos_MM_2023\Relogio_digital_1\simulation\qsim
+Z4 w1683389772
+Z5 8Relogio_digital_1.vo
+Z6 FRelogio_digital_1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Relogio_digital_1.vo|
+Z9 o-work work -O0
+Z10 n@b@l@o@c@o_@c@o@n@t@a@d@o@r23
+!i10b 1
+Z11 !s100 3^3]h0@8:JVMWeOIMg1OW3
+!s85 0
+Z12 !s108 1683389772.974000
+Z13 !s107 Relogio_digital_1.vo|
+!s101 -O0
+vBLOCO_CONTADOR23_vlg_check_tst
+!i10b 1
+!s100 QmSK8JIAd7FaiV6N2ND^d0
+IQ0J6ND1bgen1cH_5RG`L50
+VXGMlMLiS93TQSJ`4MUaTo3
+R3
+Z14 w1683389771
+Z15 8Relogio_digital_1.vt
+Z16 FRelogio_digital_1.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z17 !s108 1683389773.034000
+Z18 !s107 Relogio_digital_1.vt|
+Z19 !s90 -work|work|Relogio_digital_1.vt|
+!s101 -O0
+R9
+n@b@l@o@c@o_@c@o@n@t@a@d@o@r23_vlg_check_tst
+vBLOCO_CONTADOR23_vlg_sample_tst
+!i10b 1
+!s100 elZ<Efo@EM`J[jgb8ff4a1
+Ig^gJHh3Kg]2H`]60n0`3o3
+V6]BWih_ET?MdY?h33DXIi3
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@b@l@o@c@o_@c@o@n@t@a@d@o@r23_vlg_sample_tst
+vBLOCO_CONTADOR23_vlg_vec_tst
+!i10b 1
+!s100 @zX^Q0?f>d7odLaAVm]5Y2
+IzIczg5hIgXTEdnJSdf<_?1
+VI4Af<kUCY?ldf13DA`P=21
+R3
+R14
+R15
+R16
+Z20 L0 259
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@b@l@o@c@o_@c@o@n@t@a@d@o@r23_vlg_vec_tst
+vBLOCO_CONTADOR59
+Z21 !s100 6Sfm6G2l@N8Rc;LcWDkl91
+Z22 IA7`][07NHClY:N5CS4`d@0
+Z23 VeGaiO5C_F1N`m3^om_bnf2
+R3
+Z24 w1683388670
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z25 n@b@l@o@c@o_@c@o@n@t@a@d@o@r59
+Z26 !s108 1683388671.186000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vBLOCO_CONTADOR59_vlg_check_tst
+Z27 !s100 8:YMlK?z<=OBHL6I266nM3
+Z28 Il`>F<1;Q:]2>jRQXJQBg=1
+Z29 V<D9OBoKi?j1<3`Z5YzL1I1
+R3
+Z30 w1683388669
+R15
+R16
+L0 57
+R7
+r1
+31
+Z31 !s108 1683388671.236000
+Z32 !s107 Relogio_digital_1.vt|
+R19
+R9
+Z33 n@b@l@o@c@o_@c@o@n@t@a@d@o@r59_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vBLOCO_CONTADOR59_vlg_sample_tst
+Z34 !s100 0gM=`nDHCILa;PkXPl63Y1
+Z35 IFO47]4::kc06h`@44CPFa3
+Z36 VgUQcQF?WfA`@=jH`k?9@]3
+R3
+R30
+R15
+R16
+L0 29
+R7
+r1
+31
+R31
+R32
+R19
+R9
+Z37 n@b@l@o@c@o_@c@o@n@t@a@d@o@r59_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vBLOCO_CONTADOR59_vlg_vec_tst
+Z38 I=[XIjgF_]]n[kH=nIYoL^0
+Z39 V82ZVCi79US_54k7h=AhT73
+R3
+R30
+R15
+R16
+R20
+R7
+r1
+31
+R31
+R32
+R19
+R9
+Z40 n@b@l@o@c@o_@c@o@n@t@a@d@o@r59_vlg_vec_tst
+Z41 !s100 AbSbcnXEPScH6JHbfP[cl0
+!i10b 1
+!s85 0
+!s101 -O0

@@ -1,0 +1,718 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+
+// DATE "05/06/2023 13:16:12"
+
+// 
+// Device: Altera EP2C35F672C6 Package FBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module BLOCO_CONTADOR23 (
+	CLK_IN,
+	SAIDA);
+input 	CLK_IN;
+output 	[6:0] SAIDA;
+
+// Design Ports Information
+// SAIDA[0]	=>  Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[1]	=>  Location: PIN_AE2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[2]	=>  Location: PIN_AE3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[3]	=>  Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[4]	=>  Location: PIN_AD2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[5]	=>  Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// SAIDA[6]	=>  Location: PIN_AC3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// CLK_IN	=>  Location: PIN_P2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \Add1~0_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0_combout ;
+wire \CLK_IN~combout ;
+wire \CLK_IN~clkctrl_outclk ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ;
+wire \ACUMULADOR_UNIDADE~3_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ;
+wire \Add1~1_combout ;
+wire \ACUMULADOR_UNIDADE~4_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ;
+wire \ACUMULADOR_UNIDADE~1_combout ;
+wire \ACUMULADOR_UNIDADE~2_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ;
+wire \LessThan0~0_combout ;
+wire \ACUMULADOR_UNIDADE~0_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0_combout ;
+wire \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ;
+
+
+// Location: LCCOMB_X1_Y3_N18
+cycloneii_lcell_comb \Add1~0 (
+// Equation(s):
+// \Add1~0_combout  = \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout  $ (((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout  & \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout )))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.datab(vcc),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.cin(gnd),
+	.combout(\Add1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Add1~0 .lut_mask = 16'h5AF0;
+defparam \Add1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N6
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0_combout  = (\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout  & \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout )
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0 .lut_mask = 16'hF000;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: PIN_P2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+cycloneii_io \CLK_IN~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\CLK_IN~combout ),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(CLK_IN));
+// synopsys translate_off
+defparam \CLK_IN~I .input_async_reset = "none";
+defparam \CLK_IN~I .input_power_up = "low";
+defparam \CLK_IN~I .input_register_mode = "none";
+defparam \CLK_IN~I .input_sync_reset = "none";
+defparam \CLK_IN~I .oe_async_reset = "none";
+defparam \CLK_IN~I .oe_power_up = "low";
+defparam \CLK_IN~I .oe_register_mode = "none";
+defparam \CLK_IN~I .oe_sync_reset = "none";
+defparam \CLK_IN~I .operation_mode = "input";
+defparam \CLK_IN~I .output_async_reset = "none";
+defparam \CLK_IN~I .output_power_up = "low";
+defparam \CLK_IN~I .output_register_mode = "none";
+defparam \CLK_IN~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: CLKCTRL_G3
+cycloneii_clkctrl \CLK_IN~clkctrl (
+	.ena(vcc),
+	.inclk({gnd,gnd,gnd,\CLK_IN~combout }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\CLK_IN~clkctrl_outclk ));
+// synopsys translate_off
+defparam \CLK_IN~clkctrl .clock_type = "global clock";
+defparam \CLK_IN~clkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N10
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0_combout  = (\LessThan0~0_combout  & (((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout  & \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout )))) # (!\LessThan0~0_combout  & 
+// (\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout  $ (((\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout )))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ),
+	.datab(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ),
+	.datad(\LessThan0~0_combout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0 .lut_mask = 16'hC05A;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N11
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ));
+
+// Location: LCCOMB_X1_Y3_N30
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout  = (!\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout  & !\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout )
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0 .lut_mask = 16'h000F;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N24
+cycloneii_lcell_comb \ACUMULADOR_UNIDADE~3 (
+// Equation(s):
+// \ACUMULADOR_UNIDADE~3_combout  = (\Add1~0_combout  & (\LessThan0~0_combout  & ((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ) # (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ))))
+
+	.dataa(\Add1~0_combout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\ACUMULADOR_UNIDADE~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ACUMULADOR_UNIDADE~3 .lut_mask = 16'h8880;
+defparam \ACUMULADOR_UNIDADE~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N25
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\ACUMULADOR_UNIDADE~3_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ));
+
+// Location: LCCOMB_X1_Y3_N8
+cycloneii_lcell_comb \Add1~1 (
+// Equation(s):
+// \Add1~1_combout  = \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout  $ (((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout  & (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout  & \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.datab(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ),
+	.cin(gnd),
+	.combout(\Add1~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Add1~1 .lut_mask = 16'h7F80;
+defparam \Add1~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N26
+cycloneii_lcell_comb \ACUMULADOR_UNIDADE~4 (
+// Equation(s):
+// \ACUMULADOR_UNIDADE~4_combout  = (\LessThan0~0_combout  & (\Add1~1_combout  & ((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ) # (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\Add1~1_combout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\ACUMULADOR_UNIDADE~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ACUMULADOR_UNIDADE~4 .lut_mask = 16'hC080;
+defparam \ACUMULADOR_UNIDADE~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N27
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\ACUMULADOR_UNIDADE~4_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ));
+
+// Location: LCCOMB_X1_Y3_N28
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout  = (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout  & (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout  & ((!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ) # 
+// (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ),
+	.datab(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1 .lut_mask = 16'h0111;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N16
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1_combout  = (\LessThan0~0_combout  & (((\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout  & \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout )))) # (!\LessThan0~0_combout  & 
+// (\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0_combout  $ ((\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~0_combout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1 .lut_mask = 16'hD212;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N17
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~1_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ));
+
+// Location: LCCOMB_X1_Y3_N0
+cycloneii_lcell_comb \ACUMULADOR_UNIDADE~1 (
+// Equation(s):
+// \ACUMULADOR_UNIDADE~1_combout  = (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout  & ((\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ) # (\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout )))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ),
+	.datab(vcc),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\ACUMULADOR_UNIDADE~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ACUMULADOR_UNIDADE~1 .lut_mask = 16'h00FA;
+defparam \ACUMULADOR_UNIDADE~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N14
+cycloneii_lcell_comb \ACUMULADOR_UNIDADE~2 (
+// Equation(s):
+// \ACUMULADOR_UNIDADE~2_combout  = (\LessThan0~0_combout  & (!\ACUMULADOR_UNIDADE~1_combout  & (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout  $ (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.datad(\ACUMULADOR_UNIDADE~1_combout ),
+	.cin(gnd),
+	.combout(\ACUMULADOR_UNIDADE~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ACUMULADOR_UNIDADE~2 .lut_mask = 16'h0048;
+defparam \ACUMULADOR_UNIDADE~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N15
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\ACUMULADOR_UNIDADE~2_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ));
+
+// Location: LCCOMB_X1_Y3_N22
+cycloneii_lcell_comb \LessThan0~0 (
+// Equation(s):
+// \LessThan0~0_combout  = ((!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout  & (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout  & !\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ))) # (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout )
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ),
+	.datab(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ),
+	.cin(gnd),
+	.combout(\LessThan0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan0~0 .lut_mask = 16'h01FF;
+defparam \LessThan0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y3_N12
+cycloneii_lcell_comb \ACUMULADOR_UNIDADE~0 (
+// Equation(s):
+// \ACUMULADOR_UNIDADE~0_combout  = (\LessThan0~0_combout  & (!\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout  & ((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ) # (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\ACUMULADOR_UNIDADE~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ACUMULADOR_UNIDADE~0 .lut_mask = 16'h0C08;
+defparam \ACUMULADOR_UNIDADE~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N13
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\ACUMULADOR_UNIDADE~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ));
+
+// Location: LCCOMB_X1_Y3_N20
+cycloneii_lcell_comb \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0 (
+// Equation(s):
+// \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0_combout  = (\LessThan0~0_combout  & (\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout  & ((\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ) # (\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout )))) # 
+// (!\LessThan0~0_combout  & (((!\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ))))
+
+	.dataa(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~0_combout ),
+	.datab(\LessThan0~0_combout ),
+	.datac(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ),
+	.datad(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~1_combout ),
+	.cin(gnd),
+	.combout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0 .lut_mask = 16'hC383;
+defparam \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCFF_X1_Y3_N21
+cycloneii_lcell_ff \PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0] (
+	.clk(!\CLK_IN~clkctrl_outclk ),
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~0_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ));
+
+// Location: PIN_AB3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[0]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[0]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[0]));
+// synopsys translate_off
+defparam \SAIDA[0]~I .input_async_reset = "none";
+defparam \SAIDA[0]~I .input_power_up = "low";
+defparam \SAIDA[0]~I .input_register_mode = "none";
+defparam \SAIDA[0]~I .input_sync_reset = "none";
+defparam \SAIDA[0]~I .oe_async_reset = "none";
+defparam \SAIDA[0]~I .oe_power_up = "low";
+defparam \SAIDA[0]~I .oe_register_mode = "none";
+defparam \SAIDA[0]~I .oe_sync_reset = "none";
+defparam \SAIDA[0]~I .operation_mode = "output";
+defparam \SAIDA[0]~I .output_async_reset = "none";
+defparam \SAIDA[0]~I .output_power_up = "low";
+defparam \SAIDA[0]~I .output_register_mode = "none";
+defparam \SAIDA[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AE2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[1]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[1]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[1]));
+// synopsys translate_off
+defparam \SAIDA[1]~I .input_async_reset = "none";
+defparam \SAIDA[1]~I .input_power_up = "low";
+defparam \SAIDA[1]~I .input_register_mode = "none";
+defparam \SAIDA[1]~I .input_sync_reset = "none";
+defparam \SAIDA[1]~I .oe_async_reset = "none";
+defparam \SAIDA[1]~I .oe_power_up = "low";
+defparam \SAIDA[1]~I .oe_register_mode = "none";
+defparam \SAIDA[1]~I .oe_sync_reset = "none";
+defparam \SAIDA[1]~I .operation_mode = "output";
+defparam \SAIDA[1]~I .output_async_reset = "none";
+defparam \SAIDA[1]~I .output_power_up = "low";
+defparam \SAIDA[1]~I .output_register_mode = "none";
+defparam \SAIDA[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AE3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[2]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[2]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[2]));
+// synopsys translate_off
+defparam \SAIDA[2]~I .input_async_reset = "none";
+defparam \SAIDA[2]~I .input_power_up = "low";
+defparam \SAIDA[2]~I .input_register_mode = "none";
+defparam \SAIDA[2]~I .input_sync_reset = "none";
+defparam \SAIDA[2]~I .oe_async_reset = "none";
+defparam \SAIDA[2]~I .oe_power_up = "low";
+defparam \SAIDA[2]~I .oe_register_mode = "none";
+defparam \SAIDA[2]~I .oe_sync_reset = "none";
+defparam \SAIDA[2]~I .operation_mode = "output";
+defparam \SAIDA[2]~I .output_async_reset = "none";
+defparam \SAIDA[2]~I .output_power_up = "low";
+defparam \SAIDA[2]~I .output_register_mode = "none";
+defparam \SAIDA[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AB4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[3]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_UNIDADE[3]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[3]));
+// synopsys translate_off
+defparam \SAIDA[3]~I .input_async_reset = "none";
+defparam \SAIDA[3]~I .input_power_up = "low";
+defparam \SAIDA[3]~I .input_register_mode = "none";
+defparam \SAIDA[3]~I .input_sync_reset = "none";
+defparam \SAIDA[3]~I .oe_async_reset = "none";
+defparam \SAIDA[3]~I .oe_power_up = "low";
+defparam \SAIDA[3]~I .oe_register_mode = "none";
+defparam \SAIDA[3]~I .oe_sync_reset = "none";
+defparam \SAIDA[3]~I .operation_mode = "output";
+defparam \SAIDA[3]~I .output_async_reset = "none";
+defparam \SAIDA[3]~I .output_power_up = "low";
+defparam \SAIDA[3]~I .output_register_mode = "none";
+defparam \SAIDA[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AD2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[4]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[0]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[4]));
+// synopsys translate_off
+defparam \SAIDA[4]~I .input_async_reset = "none";
+defparam \SAIDA[4]~I .input_power_up = "low";
+defparam \SAIDA[4]~I .input_register_mode = "none";
+defparam \SAIDA[4]~I .input_sync_reset = "none";
+defparam \SAIDA[4]~I .oe_async_reset = "none";
+defparam \SAIDA[4]~I .oe_power_up = "low";
+defparam \SAIDA[4]~I .oe_register_mode = "none";
+defparam \SAIDA[4]~I .oe_sync_reset = "none";
+defparam \SAIDA[4]~I .operation_mode = "output";
+defparam \SAIDA[4]~I .output_async_reset = "none";
+defparam \SAIDA[4]~I .output_power_up = "low";
+defparam \SAIDA[4]~I .output_register_mode = "none";
+defparam \SAIDA[4]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AA6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[5]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[1]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[5]));
+// synopsys translate_off
+defparam \SAIDA[5]~I .input_async_reset = "none";
+defparam \SAIDA[5]~I .input_power_up = "low";
+defparam \SAIDA[5]~I .input_register_mode = "none";
+defparam \SAIDA[5]~I .input_sync_reset = "none";
+defparam \SAIDA[5]~I .oe_async_reset = "none";
+defparam \SAIDA[5]~I .oe_power_up = "low";
+defparam \SAIDA[5]~I .oe_register_mode = "none";
+defparam \SAIDA[5]~I .oe_sync_reset = "none";
+defparam \SAIDA[5]~I .operation_mode = "output";
+defparam \SAIDA[5]~I .output_async_reset = "none";
+defparam \SAIDA[5]~I .output_power_up = "low";
+defparam \SAIDA[5]~I .output_register_mode = "none";
+defparam \SAIDA[5]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// Location: PIN_AC3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+cycloneii_io \SAIDA[6]~I (
+	.datain(\PROCESSO_CONTADOR:ACUMULADOR_DEZENA[2]~regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.differentialin(gnd),
+	.linkin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.differentialout(),
+	.linkout(),
+	.padio(SAIDA[6]));
+// synopsys translate_off
+defparam \SAIDA[6]~I .input_async_reset = "none";
+defparam \SAIDA[6]~I .input_power_up = "low";
+defparam \SAIDA[6]~I .input_register_mode = "none";
+defparam \SAIDA[6]~I .input_sync_reset = "none";
+defparam \SAIDA[6]~I .oe_async_reset = "none";
+defparam \SAIDA[6]~I .oe_power_up = "low";
+defparam \SAIDA[6]~I .oe_register_mode = "none";
+defparam \SAIDA[6]~I .oe_sync_reset = "none";
+defparam \SAIDA[6]~I .operation_mode = "output";
+defparam \SAIDA[6]~I .output_async_reset = "none";
+defparam \SAIDA[6]~I .output_power_up = "low";
+defparam \SAIDA[6]~I .output_register_mode = "none";
+defparam \SAIDA[6]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+endmodule
