@@ -18,24 +18,30 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/22/2023 21:41:08"
+// Generated on "05/22/2023 23:46:03"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    CONVERSOR_1KHZ
+// Verilog Self-Checking Test Bench (with test vectors) for design :    TEMPORIZADOR
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module CONVERSOR_1KHZ_vlg_sample_tst(
+module TEMPORIZADOR_vlg_sample_tst(
+	CHIP_SELECT,
 	CLK_I,
+	N_BITS,
+	TEMPO,
 	sampler_tx
 );
+input  CHIP_SELECT;
 input  CLK_I;
+input [4:0] N_BITS;
+input [4:0] TEMPO;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(CLK_I)
+always @(CHIP_SELECT or CLK_I or N_BITS or TEMPO)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -54,27 +60,33 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module CONVERSOR_1KHZ_vlg_check_tst (
+module TEMPORIZADOR_vlg_check_tst (
 	CLK_O,
+	SINAL_FINAL,
 	sampler_rx
 );
 input  CLK_O;
+input  SINAL_FINAL;
 input sampler_rx;
 
 reg  CLK_O_expected;
+reg  SINAL_FINAL_expected;
 
 reg  CLK_O_prev;
+reg  SINAL_FINAL_prev;
 
 reg  CLK_O_expected_prev;
+reg  SINAL_FINAL_expected_prev;
 
 reg  last_CLK_O_exp;
+reg  last_SINAL_FINAL_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:1] on_first_change ;
+reg [1:2] on_first_change ;
 
 
 initial
@@ -82,7 +94,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 1'b1;
+on_first_change = 2'b1;
 end
 
 // update real /o prevs
@@ -90,6 +102,7 @@ end
 always @(trigger)
 begin
 	CLK_O_prev = CLK_O;
+	SINAL_FINAL_prev = SINAL_FINAL;
 end
 
 // update expected /o prevs
@@ -97,6 +110,7 @@ end
 always @(trigger)
 begin
 	CLK_O_expected_prev = CLK_O_expected;
+	SINAL_FINAL_expected_prev = SINAL_FINAL_expected;
 end
 
 
@@ -106,8 +120,14 @@ initial
 begin
 	CLK_O_expected = 1'bX;
 end 
+
+// expected SINAL_FINAL
+initial
+begin
+	SINAL_FINAL_expected = 1'bX;
+end 
 // generate trigger
-always @(CLK_O_expected or CLK_O)
+always @(CLK_O_expected or CLK_O or SINAL_FINAL_expected or SINAL_FINAL)
 begin
 	trigger <= ~trigger;
 end
@@ -117,8 +137,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected CLK_O = %b | ",CLK_O_expected_prev);
-	$display("| real CLK_O = %b | ",CLK_O_prev);
+	$display("| expected CLK_O = %b | expected SINAL_FINAL = %b | ",CLK_O_expected_prev,SINAL_FINAL_expected_prev);
+	$display("| real CLK_O = %b | real SINAL_FINAL = %b | ",CLK_O_prev,SINAL_FINAL_prev);
 `endif
 	if (
 		( CLK_O_expected_prev !== 1'bx ) && ( CLK_O_prev !== CLK_O_expected_prev )
@@ -132,6 +152,19 @@ begin
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
 		last_CLK_O_exp = CLK_O_expected_prev;
+	end
+	if (
+		( SINAL_FINAL_expected_prev !== 1'bx ) && ( SINAL_FINAL_prev !== SINAL_FINAL_expected_prev )
+		&& ((SINAL_FINAL_expected_prev !== last_SINAL_FINAL_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SINAL_FINAL :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SINAL_FINAL_expected_prev);
+		$display ("     Real value = %b", SINAL_FINAL_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_SINAL_FINAL_exp = SINAL_FINAL_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -149,37 +182,109 @@ $finish;
 end 
 endmodule
 
-module CONVERSOR_1KHZ_vlg_vec_tst();
+module TEMPORIZADOR_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg CHIP_SELECT;
 reg CLK_I;
+reg [4:0] N_BITS;
+reg [4:0] TEMPO;
 // wires                                               
 wire CLK_O;
+wire SINAL_FINAL;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-CONVERSOR_1KHZ i1 (
+TEMPORIZADOR i1 (
 // port map - connection between master ports and signals/registers   
+	.CHIP_SELECT(CHIP_SELECT),
 	.CLK_I(CLK_I),
-	.CLK_O(CLK_O)
+	.CLK_O(CLK_O),
+	.N_BITS(N_BITS),
+	.SINAL_FINAL(SINAL_FINAL),
+	.TEMPO(TEMPO)
 );
 
-// CLK_I
-always
+// CHIP_SELECT
+initial
 begin
-	CLK_I = 1'b0;
-	CLK_I = #50 1'b1;
-	#50;
+	CHIP_SELECT = 1'b1;
 end 
 
-CONVERSOR_1KHZ_vlg_sample_tst tb_sample (
+// CLK_I
+initial
+begin
+	repeat(27)
+	begin
+		CLK_I = 1'b0;
+		CLK_I = #18519 1'b1;
+		# 18518;
+	end
+	CLK_I = 1'b0;
+end 
+// TEMPO[ 4 ]
+initial
+begin
+	TEMPO[4] = 1'b0;
+end 
+// TEMPO[ 3 ]
+initial
+begin
+	TEMPO[3] = 1'b0;
+end 
+// TEMPO[ 2 ]
+initial
+begin
+	TEMPO[2] = 1'b1;
+end 
+// TEMPO[ 1 ]
+initial
+begin
+	TEMPO[1] = 1'b1;
+end 
+// TEMPO[ 0 ]
+initial
+begin
+	TEMPO[0] = 1'b0;
+end 
+// N_BITS[ 4 ]
+initial
+begin
+	N_BITS[4] = 1'b0;
+end 
+// N_BITS[ 3 ]
+initial
+begin
+	N_BITS[3] = 1'b0;
+end 
+// N_BITS[ 2 ]
+initial
+begin
+	N_BITS[2] = 1'b1;
+end 
+// N_BITS[ 1 ]
+initial
+begin
+	N_BITS[1] = 1'b0;
+end 
+// N_BITS[ 0 ]
+initial
+begin
+	N_BITS[0] = 1'b0;
+end 
+
+TEMPORIZADOR_vlg_sample_tst tb_sample (
+	.CHIP_SELECT(CHIP_SELECT),
 	.CLK_I(CLK_I),
+	.N_BITS(N_BITS),
+	.TEMPO(TEMPO),
 	.sampler_tx(sampler)
 );
 
-CONVERSOR_1KHZ_vlg_check_tst tb_out(
+TEMPORIZADOR_vlg_check_tst tb_out(
 	.CLK_O(CLK_O),
+	.SINAL_FINAL(SINAL_FINAL),
 	.sampler_rx(sampler)
 );
 endmodule

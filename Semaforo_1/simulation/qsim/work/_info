@@ -3,83 +3,203 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\qsim
-vCONVERSOR_1KHZ
-Z1 !s100 <hD7cN=A=C<b=3;JjCTcG0
-Z2 IS6PO1d:MY:1>fj=QmZ8ih0
-Z3 VJ23DBKB3Uk<c[:B3YmMh02
-Z4 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\qsim
-Z5 w1684802468
-Z6 8Semaforo.vo
-Z7 FSemaforo.vo
+vBLOCO_PRINCIPAL
+Z1 IK27B2PMnQhfebJS1F]]i52
+Z2 V`VTiO?^2^TM53[QeOO1Kz2
+Z3 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\qsim
+Z4 w1684809639
+Z5 8Semaforo.vo
+Z6 FSemaforo.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|Semaforo.vo|
-Z10 o-work work -O0
-Z11 n@c@o@n@v@e@r@s@o@r_1@k@h@z
+Z8 !s90 -work|work|Semaforo.vo|
+Z9 o-work work -O0
+Z10 n@b@l@o@c@o_@p@r@i@n@c@i@p@a@l
+Z11 !s100 bEN40C^`=2J4:fzNUoE1k1
+Z12 !s108 1684809640.828000
+Z13 !s107 Semaforo.vo|
 !i10b 1
 !s85 0
-Z12 !s108 1684802470.562000
-Z13 !s107 Semaforo.vo|
+!s101 -O0
+vBLOCO_PRINCIPAL_vlg_vec_tst
+Z14 !s100 GmETzbzDlNl>?3OYEcD_B1
+Z15 I4lWLd];c`54ASoL1blJ_80
+Z16 VNTe[7lc1I4HYEYNf>IdYf3
+R3
+Z17 w1684809638
+Z18 8Semaforo.vt
+Z19 FSemaforo.vt
+L0 29
+R7
+r1
+31
+Z20 !s90 -work|work|Semaforo.vt|
+R9
+Z21 n@b@l@o@c@o_@p@r@i@n@c@i@p@a@l_vlg_vec_tst
+Z22 !s108 1684809641.279000
+Z23 !s107 Semaforo.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vCONVERSOR_1KHZ
+Z24 !s100 5fcARMdX1o6m[G?iQ_[bK2
+Z25 IYmeo@S=YkP_ho6jilPVRU1
+Z26 VJ23DBKB3Uk<c[:B3YmMh02
+R3
+Z27 w1684809695
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z28 n@c@o@n@v@e@r@s@o@r_1@k@h@z
+Z29 !s108 1684809696.838000
+R13
+!i10b 1
+!s85 0
 !s101 -O0
 vCONVERSOR_1KHZ_vlg_check_tst
-!i10b 1
-Z14 !s100 YIk8>[Yzj>_:JbYi;dVeX1
-Z15 IQMoSaabbHjBLNakdTc?_R0
-Z16 V>1`Tn3X@]A531ho54P>:?1
-R4
-R5
-Z17 8Semaforo.vt
-Z18 FSemaforo.vt
+Z30 !s100 YIk8>[Yzj>_:JbYi;dVeX1
+Z31 IQMoSaabbHjBLNakdTc?_R0
+Z32 V>1`Tn3X@]A531ho54P>:?1
+R3
+Z33 w1684809694
+R18
+R19
 L0 57
-R8
+R7
 r1
-!s85 0
 31
-Z19 !s108 1684802470.985000
-Z20 !s107 Semaforo.vt|
-Z21 !s90 -work|work|Semaforo.vt|
+Z34 !s108 1684809697.272000
+R23
+R20
+R9
+Z35 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_check_tst
+!i10b 1
+!s85 0
 !s101 -O0
-R10
-Z22 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_check_tst
 vCONVERSOR_1KHZ_vlg_sample_tst
-!i10b 1
-Z23 !s100 NM=WL;TO63=lU5`>R1PL?1
-Z24 I8U9aMCE6QRePD7RV4AAGd3
-Z25 V]a_>3NNTF:0cQJ:0BCCc03
-R4
-R5
-R17
+Z36 !s100 NM=WL;TO63=lU5`>R1PL?1
+Z37 I8U9aMCE6QRePD7RV4AAGd3
+Z38 V]a_>3NNTF:0cQJ:0BCCc03
+R3
+R33
 R18
+R19
 L0 29
-R8
+R7
 r1
-!s85 0
 31
-R19
+R34
+R23
 R20
-R21
-!s101 -O0
-R10
-Z26 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_sample_tst
-vCONVERSOR_1KHZ_vlg_vec_tst
+R9
+Z39 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_sample_tst
 !i10b 1
-!s100 5ASD1Z0W7][`c37R=85_a1
-Ih6[W4O1z:Igdll6jAJBbC2
-Z27 Vo@P9HCH2IjliPj8K:=7Mo2
-R4
-R5
-R17
+!s85 0
+!s101 -O0
+vCONVERSOR_1KHZ_vlg_vec_tst
+Z40 IjKAiDi4UICT5ke:XzZ5A>1
+Z41 Vo@P9HCH2IjliPj8K:=7Mo2
+R3
+R33
 R18
-Z28 L0 152
+R19
+Z42 L0 152
+R7
+r1
+31
+R34
+R23
+R20
+R9
+Z43 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_vec_tst
+Z44 !s100 WDK>zf2a=lR4bPjK2ISd12
+!i10b 1
+!s85 0
+!s101 -O0
+vTEMPORIZADOR
+Z45 IAba@AXV@_[FoG3hhaW3142
+Z46 V_QN1A^^kMMOS<9B>lanjm3
+R3
+Z47 w1684809963
+R5
+R6
+L0 31
+R7
+r1
+31
 R8
+R9
+Z48 n@t@e@m@p@o@r@i@z@a@d@o@r
+!i10b 1
+Z49 !s100 V0gUh^kUXDzO6YaZJLYM<0
+!s85 0
+Z50 !s108 1684809965.292000
+R13
+!s101 -O0
+vTEMPORIZADOR_vlg_check_tst
+!i10b 1
+!s100 RP:IIARBN:ZE4[F@5>Iza3
+I`XZ>6^ICEL6_QCgVXXoAN2
+V99[DkBX5k6oMe=CQXZ]z>1
+R3
+R47
+R18
+R19
+L0 63
+R7
 r1
 !s85 0
 31
-R19
+Z51 !s108 1684809965.728000
+Z52 !s107 Semaforo.vt|
 R20
-R21
 !s101 -O0
-R10
-Z29 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_vec_tst
+R9
+n@t@e@m@p@o@r@i@z@a@d@o@r_vlg_check_tst
+vTEMPORIZADOR_vlg_sample_tst
+!i10b 1
+!s100 [_k25aY;N:N>D2OlekFcH3
+IiE]>D:^gZdgCfSbnZiNcX2
+V_A<<N:edY`252H76kWbNi3
+R3
+R47
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R51
+R52
+R20
+!s101 -O0
+R9
+n@t@e@m@p@o@r@i@z@a@d@o@r_vlg_sample_tst
+vTEMPORIZADOR_vlg_vec_tst
+!i10b 1
+!s100 ^fRU2X<ainANdgm35AC<T3
+Idbo78nb]BVTiUeQH7dPT03
+V:Wo8n7>M3B978>3dbA87L2
+R3
+R47
+R18
+R19
+L0 185
+R7
+r1
+!s85 0
+31
+R51
+R52
+R20
+!s101 -O0
+R9
+n@t@e@m@p@o@r@i@z@a@d@o@r_vlg_vec_tst

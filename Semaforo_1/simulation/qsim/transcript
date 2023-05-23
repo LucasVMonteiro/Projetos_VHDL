@@ -2,28 +2,32 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module CONVERSOR_1KHZ
+# -- Compiling module TEMPORIZADOR
 # 
 # Top level modules:
-# 	CONVERSOR_1KHZ
+# 	TEMPORIZADOR
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module CONVERSOR_1KHZ_vlg_sample_tst
-# -- Compiling module CONVERSOR_1KHZ_vlg_check_tst
-# -- Compiling module CONVERSOR_1KHZ_vlg_vec_tst
+# -- Compiling module TEMPORIZADOR_vlg_sample_tst
+# -- Compiling module TEMPORIZADOR_vlg_check_tst
+# -- Compiling module TEMPORIZADOR_vlg_vec_tst
 # 
 # Top level modules:
-# 	CONVERSOR_1KHZ_vlg_vec_tst
-# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.CONVERSOR_1KHZ_vlg_vec_tst 
-# Loading work.CONVERSOR_1KHZ_vlg_vec_tst
-# Loading work.CONVERSOR_1KHZ
+# 	TEMPORIZADOR_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.TEMPORIZADOR_vlg_vec_tst 
+# Loading work.TEMPORIZADOR_vlg_vec_tst
+# Loading work.TEMPORIZADOR
 # Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
-# Loading work.CONVERSOR_1KHZ_vlg_sample_tst
-# Loading work.CONVERSOR_1KHZ_vlg_check_tst
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.TEMPORIZADOR_vlg_sample_tst
+# Loading work.TEMPORIZADOR_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : Semaforo.vt(148)
-#    Time: 1 us  Iteration: 0  Instance: /CONVERSOR_1KHZ_vlg_vec_tst/tb_out
+# ** Note: $finish    : Semaforo.vt(181)
+#    Time: 1 us  Iteration: 0  Instance: /TEMPORIZADOR_vlg_vec_tst/tb_out
