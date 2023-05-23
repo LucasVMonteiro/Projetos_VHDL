@@ -62,7 +62,7 @@ MONITOR_SINAL_FINAL_RED <= SINAL_FINAL_RED;
 
 TEMPORIZADOR_RED : TEMPORIZADOR PORT MAP(	
 														SINAL_CLKO_CONVERSOR,
-														"01000", -- 6  = 00110
+														"00110", -- 6  = 00110
 														"10010", -- 18 = 10010
 														'1',
 														SINAL_FINAL_RED,

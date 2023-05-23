@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Semaforo
-Tue May 23 00:15:44 2023
+Tue May 23 01:25:52 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 23 00:15:44 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 23 01:25:52 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Semaforo                                        ;
 ; Top-level Entity Name              ; BLOCO_PRINCIPAL                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 227                                             ;
-;     Total combinational functions  ; 227                                             ;
+; Total logic elements               ; 245                                             ;
+;     Total combinational functions  ; 245                                             ;
 ;     Dedicated logic registers      ; 123                                             ;
 ; Total registers                    ; 123                                             ;
 ; Total pins                         ; 30                                              ;
@@ -173,16 +173,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------------+
 ; Resource                                    ; Usage                              ;
 +---------------------------------------------+------------------------------------+
-; Estimated Total logic elements              ; 227                                ;
+; Estimated Total logic elements              ; 245                                ;
 ;                                             ;                                    ;
-; Total combinational functions               ; 227                                ;
+; Total combinational functions               ; 245                                ;
 ; Logic element usage by number of LUT inputs ;                                    ;
-;     -- 4 input functions                    ; 65                                 ;
-;     -- 3 input functions                    ; 6                                  ;
+;     -- 4 input functions                    ; 77                                 ;
+;     -- 3 input functions                    ; 12                                 ;
 ;     -- <=2 input functions                  ; 156                                ;
 ;                                             ;                                    ;
 ; Logic elements by mode                      ;                                    ;
-;     -- normal mode                          ; 134                                ;
+;     -- normal mode                          ; 152                                ;
 ;     -- arithmetic mode                      ; 93                                 ;
 ;                                             ;                                    ;
 ; Total registers                             ; 123                                ;
@@ -193,8 +193,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                                  ;
 ; Maximum fan-out node                        ; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK ;
 ; Maximum fan-out                             ; 72                                 ;
-; Total fan-out                               ; 858                                ;
-; Average fan-out                             ; 2.26                               ;
+; Total fan-out                               ; 924                                ;
+; Average fan-out                             ; 2.32                               ;
 +---------------------------------------------+------------------------------------+
 
 
@@ -203,9 +203,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |BLOCO_PRINCIPAL                   ; 227 (26)          ; 123 (19)     ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |BLOCO_PRINCIPAL                               ; work         ;
-;    |CONVERSOR_1KHZ:CONVERSOR|      ; 55 (55)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR      ; work         ;
-;    |TEMPORIZADOR:TEMPORIZADOR_RED| ; 146 (146)         ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED ; work         ;
+; |BLOCO_PRINCIPAL                   ; 245 (26)          ; 123 (19)     ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |BLOCO_PRINCIPAL                               ; work         ;
+;    |CONVERSOR_1KHZ:CONVERSOR|      ; 53 (53)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR      ; work         ;
+;    |TEMPORIZADOR:TEMPORIZADOR_RED| ; 166 (166)         ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED ; work         ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -271,9 +271,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-------+----------+-------------------------+
 ; Port         ; Type  ; Severity ; Details                 ;
 +--------------+-------+----------+-------------------------+
-; tempo[2..0]  ; Input ; Info     ; Stuck at GND            ;
-; tempo[4]     ; Input ; Info     ; Stuck at GND            ;
-; tempo[3]     ; Input ; Info     ; Stuck at VCC            ;
+; tempo[2..1]  ; Input ; Info     ; Stuck at VCC            ;
+; tempo[4..3]  ; Input ; Info     ; Stuck at GND            ;
+; tempo[0]     ; Input ; Info     ; Stuck at GND            ;
 ; n_bits[3..2] ; Input ; Info     ; Stuck at GND            ;
 ; n_bits[4]    ; Input ; Info     ; Stuck at VCC            ;
 ; n_bits[1]    ; Input ; Info     ; Stuck at VCC            ;
@@ -297,7 +297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 23 00:15:42 2023
+    Info: Processing started: Tue May 23 01:25:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Semaforo -c Semaforo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file temporizador.vhd
@@ -313,10 +313,10 @@ Info (12127): Elaborating entity "BLOCO_PRINCIPAL" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at BLOCO_PRINCIPAL.vhd(16): used implicit default value for signal "SAIDA_G" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "CONVERSOR_1KHZ" for hierarchy "CONVERSOR_1KHZ:CONVERSOR"
 Info (12128): Elaborating entity "TEMPORIZADOR" for hierarchy "TEMPORIZADOR:TEMPORIZADOR_RED"
-Warning (10542): VHDL Variable Declaration warning at TEMPORIZADOR.vhd(31): used initial value expression for variable "PERIODO_CONTAGEM" because variable was never assigned a value
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(31): signal "TEMPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(31): signal "N_BITS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(35): signal "CHIP_SELECT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10542): VHDL Variable Declaration warning at TEMPORIZADOR.vhd(44): used initial value expression for variable "PERIODO_CONTAGEM" because variable was never assigned a value
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(44): signal "TEMPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(44): signal "N_BITS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(48): signal "CHIP_SELECT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SAIDA_G[0]" is stuck at GND
     Warning (13410): Pin "SAIDA_G[1]" is stuck at GND
@@ -328,13 +328,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SAIDA_G[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 282 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 300 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 252 logic cells
+    Info (21061): Implemented 270 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Tue May 23 00:15:44 2023
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Tue May 23 01:25:52 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

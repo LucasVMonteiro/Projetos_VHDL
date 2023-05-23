@@ -29,5 +29,5 @@
 # Loading work.TEMPORIZADOR_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : Semaforo.vt(181)
+# ** Note: $finish    : Semaforo.vt(765)
 #    Time: 1 us  Iteration: 0  Instance: /TEMPORIZADOR_vlg_vec_tst/tb_out

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/22/2023 23:46:03"
+// Generated on "05/23/2023 01:06:15"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    TEMPORIZADOR
 // 
@@ -35,8 +35,8 @@ module TEMPORIZADOR_vlg_sample_tst(
 );
 input  CHIP_SELECT;
 input  CLK_I;
-input [4:0] N_BITS;
-input [4:0] TEMPO;
+input [5:0] N_BITS;
+input [5:0] TEMPO;
 output sampler_tx;
 
 reg sample;
@@ -62,23 +62,29 @@ endmodule
 
 module TEMPORIZADOR_vlg_check_tst (
 	CLK_O,
+	RAZ,
 	SINAL_FINAL,
 	sampler_rx
 );
 input  CLK_O;
+input [31:0] RAZ;
 input  SINAL_FINAL;
 input sampler_rx;
 
 reg  CLK_O_expected;
+reg [31:0] RAZ_expected;
 reg  SINAL_FINAL_expected;
 
 reg  CLK_O_prev;
+reg [31:0] RAZ_prev;
 reg  SINAL_FINAL_prev;
 
 reg  CLK_O_expected_prev;
+reg [31:0] RAZ_expected_prev;
 reg  SINAL_FINAL_expected_prev;
 
 reg  last_CLK_O_exp;
+reg [31:0] last_RAZ_exp;
 reg  last_SINAL_FINAL_exp;
 
 reg trigger;
@@ -86,7 +92,7 @@ reg trigger;
 integer i;
 integer nummismatches;
 
-reg [1:2] on_first_change ;
+reg [1:3] on_first_change ;
 
 
 initial
@@ -94,7 +100,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 2'b1;
+on_first_change = 3'b1;
 end
 
 // update real /o prevs
@@ -102,6 +108,7 @@ end
 always @(trigger)
 begin
 	CLK_O_prev = CLK_O;
+	RAZ_prev = RAZ;
 	SINAL_FINAL_prev = SINAL_FINAL;
 end
 
@@ -110,6 +117,7 @@ end
 always @(trigger)
 begin
 	CLK_O_expected_prev = CLK_O_expected;
+	RAZ_expected_prev = RAZ_expected;
 	SINAL_FINAL_expected_prev = SINAL_FINAL_expected;
 end
 
@@ -126,8 +134,168 @@ initial
 begin
 	SINAL_FINAL_expected = 1'bX;
 end 
+// expected RAZ[ 31 ]
+initial
+begin
+	RAZ_expected[31] = 1'bX;
+end 
+// expected RAZ[ 30 ]
+initial
+begin
+	RAZ_expected[30] = 1'bX;
+end 
+// expected RAZ[ 29 ]
+initial
+begin
+	RAZ_expected[29] = 1'bX;
+end 
+// expected RAZ[ 28 ]
+initial
+begin
+	RAZ_expected[28] = 1'bX;
+end 
+// expected RAZ[ 27 ]
+initial
+begin
+	RAZ_expected[27] = 1'bX;
+end 
+// expected RAZ[ 26 ]
+initial
+begin
+	RAZ_expected[26] = 1'bX;
+end 
+// expected RAZ[ 25 ]
+initial
+begin
+	RAZ_expected[25] = 1'bX;
+end 
+// expected RAZ[ 24 ]
+initial
+begin
+	RAZ_expected[24] = 1'bX;
+end 
+// expected RAZ[ 23 ]
+initial
+begin
+	RAZ_expected[23] = 1'bX;
+end 
+// expected RAZ[ 22 ]
+initial
+begin
+	RAZ_expected[22] = 1'bX;
+end 
+// expected RAZ[ 21 ]
+initial
+begin
+	RAZ_expected[21] = 1'bX;
+end 
+// expected RAZ[ 20 ]
+initial
+begin
+	RAZ_expected[20] = 1'bX;
+end 
+// expected RAZ[ 19 ]
+initial
+begin
+	RAZ_expected[19] = 1'bX;
+end 
+// expected RAZ[ 18 ]
+initial
+begin
+	RAZ_expected[18] = 1'bX;
+end 
+// expected RAZ[ 17 ]
+initial
+begin
+	RAZ_expected[17] = 1'bX;
+end 
+// expected RAZ[ 16 ]
+initial
+begin
+	RAZ_expected[16] = 1'bX;
+end 
+// expected RAZ[ 15 ]
+initial
+begin
+	RAZ_expected[15] = 1'bX;
+end 
+// expected RAZ[ 14 ]
+initial
+begin
+	RAZ_expected[14] = 1'bX;
+end 
+// expected RAZ[ 13 ]
+initial
+begin
+	RAZ_expected[13] = 1'bX;
+end 
+// expected RAZ[ 12 ]
+initial
+begin
+	RAZ_expected[12] = 1'bX;
+end 
+// expected RAZ[ 11 ]
+initial
+begin
+	RAZ_expected[11] = 1'bX;
+end 
+// expected RAZ[ 10 ]
+initial
+begin
+	RAZ_expected[10] = 1'bX;
+end 
+// expected RAZ[ 9 ]
+initial
+begin
+	RAZ_expected[9] = 1'bX;
+end 
+// expected RAZ[ 8 ]
+initial
+begin
+	RAZ_expected[8] = 1'bX;
+end 
+// expected RAZ[ 7 ]
+initial
+begin
+	RAZ_expected[7] = 1'bX;
+end 
+// expected RAZ[ 6 ]
+initial
+begin
+	RAZ_expected[6] = 1'bX;
+end 
+// expected RAZ[ 5 ]
+initial
+begin
+	RAZ_expected[5] = 1'bX;
+end 
+// expected RAZ[ 4 ]
+initial
+begin
+	RAZ_expected[4] = 1'bX;
+end 
+// expected RAZ[ 3 ]
+initial
+begin
+	RAZ_expected[3] = 1'bX;
+end 
+// expected RAZ[ 2 ]
+initial
+begin
+	RAZ_expected[2] = 1'bX;
+end 
+// expected RAZ[ 1 ]
+initial
+begin
+	RAZ_expected[1] = 1'bX;
+end 
+// expected RAZ[ 0 ]
+initial
+begin
+	RAZ_expected[0] = 1'bX;
+end 
 // generate trigger
-always @(CLK_O_expected or CLK_O or SINAL_FINAL_expected or SINAL_FINAL)
+always @(CLK_O_expected or CLK_O or RAZ_expected or RAZ or SINAL_FINAL_expected or SINAL_FINAL)
 begin
 	trigger <= ~trigger;
 end
@@ -137,8 +305,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected CLK_O = %b | expected SINAL_FINAL = %b | ",CLK_O_expected_prev,SINAL_FINAL_expected_prev);
-	$display("| real CLK_O = %b | real SINAL_FINAL = %b | ",CLK_O_prev,SINAL_FINAL_prev);
+	$display("| expected CLK_O = %b | expected RAZ = %b | expected SINAL_FINAL = %b | ",CLK_O_expected_prev,RAZ_expected_prev,SINAL_FINAL_expected_prev);
+	$display("| real CLK_O = %b | real RAZ = %b | real SINAL_FINAL = %b | ",CLK_O_prev,RAZ_prev,SINAL_FINAL_prev);
 `endif
 	if (
 		( CLK_O_expected_prev !== 1'bx ) && ( CLK_O_prev !== CLK_O_expected_prev )
@@ -154,16 +322,432 @@ begin
 		last_CLK_O_exp = CLK_O_expected_prev;
 	end
 	if (
+		( RAZ_expected_prev[0] !== 1'bx ) && ( RAZ_prev[0] !== RAZ_expected_prev[0] )
+		&& ((RAZ_expected_prev[0] !== last_RAZ_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[0] = RAZ_expected_prev[0];
+	end
+	if (
+		( RAZ_expected_prev[1] !== 1'bx ) && ( RAZ_prev[1] !== RAZ_expected_prev[1] )
+		&& ((RAZ_expected_prev[1] !== last_RAZ_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[1] = RAZ_expected_prev[1];
+	end
+	if (
+		( RAZ_expected_prev[2] !== 1'bx ) && ( RAZ_prev[2] !== RAZ_expected_prev[2] )
+		&& ((RAZ_expected_prev[2] !== last_RAZ_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[2] = RAZ_expected_prev[2];
+	end
+	if (
+		( RAZ_expected_prev[3] !== 1'bx ) && ( RAZ_prev[3] !== RAZ_expected_prev[3] )
+		&& ((RAZ_expected_prev[3] !== last_RAZ_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[3] = RAZ_expected_prev[3];
+	end
+	if (
+		( RAZ_expected_prev[4] !== 1'bx ) && ( RAZ_prev[4] !== RAZ_expected_prev[4] )
+		&& ((RAZ_expected_prev[4] !== last_RAZ_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[4] = RAZ_expected_prev[4];
+	end
+	if (
+		( RAZ_expected_prev[5] !== 1'bx ) && ( RAZ_prev[5] !== RAZ_expected_prev[5] )
+		&& ((RAZ_expected_prev[5] !== last_RAZ_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[5] = RAZ_expected_prev[5];
+	end
+	if (
+		( RAZ_expected_prev[6] !== 1'bx ) && ( RAZ_prev[6] !== RAZ_expected_prev[6] )
+		&& ((RAZ_expected_prev[6] !== last_RAZ_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[6] = RAZ_expected_prev[6];
+	end
+	if (
+		( RAZ_expected_prev[7] !== 1'bx ) && ( RAZ_prev[7] !== RAZ_expected_prev[7] )
+		&& ((RAZ_expected_prev[7] !== last_RAZ_exp[7]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[7] = RAZ_expected_prev[7];
+	end
+	if (
+		( RAZ_expected_prev[8] !== 1'bx ) && ( RAZ_prev[8] !== RAZ_expected_prev[8] )
+		&& ((RAZ_expected_prev[8] !== last_RAZ_exp[8]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[8] = RAZ_expected_prev[8];
+	end
+	if (
+		( RAZ_expected_prev[9] !== 1'bx ) && ( RAZ_prev[9] !== RAZ_expected_prev[9] )
+		&& ((RAZ_expected_prev[9] !== last_RAZ_exp[9]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[9] = RAZ_expected_prev[9];
+	end
+	if (
+		( RAZ_expected_prev[10] !== 1'bx ) && ( RAZ_prev[10] !== RAZ_expected_prev[10] )
+		&& ((RAZ_expected_prev[10] !== last_RAZ_exp[10]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[10] = RAZ_expected_prev[10];
+	end
+	if (
+		( RAZ_expected_prev[11] !== 1'bx ) && ( RAZ_prev[11] !== RAZ_expected_prev[11] )
+		&& ((RAZ_expected_prev[11] !== last_RAZ_exp[11]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[11] = RAZ_expected_prev[11];
+	end
+	if (
+		( RAZ_expected_prev[12] !== 1'bx ) && ( RAZ_prev[12] !== RAZ_expected_prev[12] )
+		&& ((RAZ_expected_prev[12] !== last_RAZ_exp[12]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[12] = RAZ_expected_prev[12];
+	end
+	if (
+		( RAZ_expected_prev[13] !== 1'bx ) && ( RAZ_prev[13] !== RAZ_expected_prev[13] )
+		&& ((RAZ_expected_prev[13] !== last_RAZ_exp[13]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[13] = RAZ_expected_prev[13];
+	end
+	if (
+		( RAZ_expected_prev[14] !== 1'bx ) && ( RAZ_prev[14] !== RAZ_expected_prev[14] )
+		&& ((RAZ_expected_prev[14] !== last_RAZ_exp[14]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[14] = RAZ_expected_prev[14];
+	end
+	if (
+		( RAZ_expected_prev[15] !== 1'bx ) && ( RAZ_prev[15] !== RAZ_expected_prev[15] )
+		&& ((RAZ_expected_prev[15] !== last_RAZ_exp[15]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[15] = RAZ_expected_prev[15];
+	end
+	if (
+		( RAZ_expected_prev[16] !== 1'bx ) && ( RAZ_prev[16] !== RAZ_expected_prev[16] )
+		&& ((RAZ_expected_prev[16] !== last_RAZ_exp[16]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[16] = RAZ_expected_prev[16];
+	end
+	if (
+		( RAZ_expected_prev[17] !== 1'bx ) && ( RAZ_prev[17] !== RAZ_expected_prev[17] )
+		&& ((RAZ_expected_prev[17] !== last_RAZ_exp[17]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[17] = RAZ_expected_prev[17];
+	end
+	if (
+		( RAZ_expected_prev[18] !== 1'bx ) && ( RAZ_prev[18] !== RAZ_expected_prev[18] )
+		&& ((RAZ_expected_prev[18] !== last_RAZ_exp[18]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[18] = RAZ_expected_prev[18];
+	end
+	if (
+		( RAZ_expected_prev[19] !== 1'bx ) && ( RAZ_prev[19] !== RAZ_expected_prev[19] )
+		&& ((RAZ_expected_prev[19] !== last_RAZ_exp[19]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[19] = RAZ_expected_prev[19];
+	end
+	if (
+		( RAZ_expected_prev[20] !== 1'bx ) && ( RAZ_prev[20] !== RAZ_expected_prev[20] )
+		&& ((RAZ_expected_prev[20] !== last_RAZ_exp[20]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[20] = RAZ_expected_prev[20];
+	end
+	if (
+		( RAZ_expected_prev[21] !== 1'bx ) && ( RAZ_prev[21] !== RAZ_expected_prev[21] )
+		&& ((RAZ_expected_prev[21] !== last_RAZ_exp[21]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[21] = RAZ_expected_prev[21];
+	end
+	if (
+		( RAZ_expected_prev[22] !== 1'bx ) && ( RAZ_prev[22] !== RAZ_expected_prev[22] )
+		&& ((RAZ_expected_prev[22] !== last_RAZ_exp[22]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[22] = RAZ_expected_prev[22];
+	end
+	if (
+		( RAZ_expected_prev[23] !== 1'bx ) && ( RAZ_prev[23] !== RAZ_expected_prev[23] )
+		&& ((RAZ_expected_prev[23] !== last_RAZ_exp[23]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[23] = RAZ_expected_prev[23];
+	end
+	if (
+		( RAZ_expected_prev[24] !== 1'bx ) && ( RAZ_prev[24] !== RAZ_expected_prev[24] )
+		&& ((RAZ_expected_prev[24] !== last_RAZ_exp[24]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[24] = RAZ_expected_prev[24];
+	end
+	if (
+		( RAZ_expected_prev[25] !== 1'bx ) && ( RAZ_prev[25] !== RAZ_expected_prev[25] )
+		&& ((RAZ_expected_prev[25] !== last_RAZ_exp[25]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[25] = RAZ_expected_prev[25];
+	end
+	if (
+		( RAZ_expected_prev[26] !== 1'bx ) && ( RAZ_prev[26] !== RAZ_expected_prev[26] )
+		&& ((RAZ_expected_prev[26] !== last_RAZ_exp[26]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[26] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[26] = RAZ_expected_prev[26];
+	end
+	if (
+		( RAZ_expected_prev[27] !== 1'bx ) && ( RAZ_prev[27] !== RAZ_expected_prev[27] )
+		&& ((RAZ_expected_prev[27] !== last_RAZ_exp[27]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[27] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[27] = RAZ_expected_prev[27];
+	end
+	if (
+		( RAZ_expected_prev[28] !== 1'bx ) && ( RAZ_prev[28] !== RAZ_expected_prev[28] )
+		&& ((RAZ_expected_prev[28] !== last_RAZ_exp[28]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[28] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[28] = RAZ_expected_prev[28];
+	end
+	if (
+		( RAZ_expected_prev[29] !== 1'bx ) && ( RAZ_prev[29] !== RAZ_expected_prev[29] )
+		&& ((RAZ_expected_prev[29] !== last_RAZ_exp[29]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[29] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[29] = RAZ_expected_prev[29];
+	end
+	if (
+		( RAZ_expected_prev[30] !== 1'bx ) && ( RAZ_prev[30] !== RAZ_expected_prev[30] )
+		&& ((RAZ_expected_prev[30] !== last_RAZ_exp[30]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[30] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[30] = RAZ_expected_prev[30];
+	end
+	if (
+		( RAZ_expected_prev[31] !== 1'bx ) && ( RAZ_prev[31] !== RAZ_expected_prev[31] )
+		&& ((RAZ_expected_prev[31] !== last_RAZ_exp[31]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RAZ[31] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RAZ_expected_prev);
+		$display ("     Real value = %b", RAZ_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_RAZ_exp[31] = RAZ_expected_prev[31];
+	end
+	if (
 		( SINAL_FINAL_expected_prev !== 1'bx ) && ( SINAL_FINAL_prev !== SINAL_FINAL_expected_prev )
 		&& ((SINAL_FINAL_expected_prev !== last_SINAL_FINAL_exp) ||
-			on_first_change[2])
+			on_first_change[3])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port SINAL_FINAL :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", SINAL_FINAL_expected_prev);
 		$display ("     Real value = %b", SINAL_FINAL_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[2] = 1'b0;
+		on_first_change[3] = 1'b0;
 		last_SINAL_FINAL_exp = SINAL_FINAL_expected_prev;
 	end
 
@@ -187,10 +771,11 @@ module TEMPORIZADOR_vlg_vec_tst();
 // general purpose registers
 reg CHIP_SELECT;
 reg CLK_I;
-reg [4:0] N_BITS;
-reg [4:0] TEMPO;
+reg [5:0] N_BITS;
+reg [5:0] TEMPO;
 // wires                                               
 wire CLK_O;
+wire [31:0] RAZ;
 wire SINAL_FINAL;
 
 wire sampler;                             
@@ -202,6 +787,7 @@ TEMPORIZADOR i1 (
 	.CLK_I(CLK_I),
 	.CLK_O(CLK_O),
 	.N_BITS(N_BITS),
+	.RAZ(RAZ),
 	.SINAL_FINAL(SINAL_FINAL),
 	.TEMPO(TEMPO)
 );
@@ -213,40 +799,16 @@ begin
 end 
 
 // CLK_I
-initial
+always
 begin
-	repeat(27)
-	begin
-		CLK_I = 1'b0;
-		CLK_I = #18519 1'b1;
-		# 18518;
-	end
 	CLK_I = 1'b0;
+	CLK_I = #1000 1'b1;
+	#1000;
 end 
-// TEMPO[ 4 ]
+// N_BITS[ 5 ]
 initial
 begin
-	TEMPO[4] = 1'b0;
-end 
-// TEMPO[ 3 ]
-initial
-begin
-	TEMPO[3] = 1'b0;
-end 
-// TEMPO[ 2 ]
-initial
-begin
-	TEMPO[2] = 1'b1;
-end 
-// TEMPO[ 1 ]
-initial
-begin
-	TEMPO[1] = 1'b1;
-end 
-// TEMPO[ 0 ]
-initial
-begin
-	TEMPO[0] = 1'b0;
+	N_BITS[5] = 1'b1;
 end 
 // N_BITS[ 4 ]
 initial
@@ -261,17 +823,47 @@ end
 // N_BITS[ 2 ]
 initial
 begin
-	N_BITS[2] = 1'b1;
+	N_BITS[2] = 1'b0;
 end 
 // N_BITS[ 1 ]
 initial
 begin
-	N_BITS[1] = 1'b0;
+	N_BITS[1] = 1'b1;
 end 
 // N_BITS[ 0 ]
 initial
 begin
 	N_BITS[0] = 1'b0;
+end 
+// TEMPO[ 5 ]
+initial
+begin
+	TEMPO[5] = 1'b1;
+end 
+// TEMPO[ 4 ]
+initial
+begin
+	TEMPO[4] = 1'b0;
+end 
+// TEMPO[ 3 ]
+initial
+begin
+	TEMPO[3] = 1'b0;
+end 
+// TEMPO[ 2 ]
+initial
+begin
+	TEMPO[2] = 1'b0;
+end 
+// TEMPO[ 1 ]
+initial
+begin
+	TEMPO[1] = 1'b1;
+end 
+// TEMPO[ 0 ]
+initial
+begin
+	TEMPO[0] = 1'b1;
 end 
 
 TEMPORIZADOR_vlg_sample_tst tb_sample (
@@ -284,6 +876,7 @@ TEMPORIZADOR_vlg_sample_tst tb_sample (
 
 TEMPORIZADOR_vlg_check_tst tb_out(
 	.CLK_O(CLK_O),
+	.RAZ(RAZ),
 	.SINAL_FINAL(SINAL_FINAL),
 	.sampler_rx(sampler)
 );

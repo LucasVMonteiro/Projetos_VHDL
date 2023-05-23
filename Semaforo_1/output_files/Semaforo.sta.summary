@@ -3,24 +3,24 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -5.817
-TNS   : -307.031
+Slack : -5.571
+TNS   : -316.727
 
 Type  : Slow Model Setup 'CLOCK_IN'
-Slack : -5.022
-TNS   : -96.371
+Slack : -5.100
+TNS   : -103.416
 
 Type  : Slow Model Setup 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
-Slack : -1.484
-TNS   : -25.109
-
-Type  : Slow Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -2.697
-TNS   : -2.697
+Slack : -1.590
+TNS   : -29.777
 
 Type  : Slow Model Hold 'CLOCK_IN'
-Slack : -2.501
-TNS   : -2.501
+Slack : -2.511
+TNS   : -2.511
+
+Type  : Slow Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
+Slack : -2.295
+TNS   : -2.295
 
 Type  : Slow Model Hold 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : 0.391
@@ -39,24 +39,24 @@ Slack : -0.500
 TNS   : -19.000
 
 Type  : Fast Model Setup 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -2.210
-TNS   : -108.572
+Slack : -2.110
+TNS   : -112.173
 
 Type  : Fast Model Setup 'CLOCK_IN'
-Slack : -1.823
-TNS   : -28.541
+Slack : -1.832
+TNS   : -31.050
 
 Type  : Fast Model Setup 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
-Slack : -0.130
-TNS   : -1.379
-
-Type  : Fast Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -1.579
-TNS   : -1.579
+Slack : -0.216
+TNS   : -3.626
 
 Type  : Fast Model Hold 'CLOCK_IN'
-Slack : -1.548
-TNS   : -1.548
+Slack : -1.559
+TNS   : -1.559
+
+Type  : Fast Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
+Slack : -1.392
+TNS   : -1.392
 
 Type  : Fast Model Hold 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : 0.215

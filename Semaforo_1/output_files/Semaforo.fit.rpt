@@ -1,5 +1,5 @@
 Fitter report for Semaforo
-Tue May 23 00:15:49 2023
+Tue May 23 01:25:57 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,15 +62,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue May 23 00:15:49 2023           ;
+; Fitter Status                      ; Successful - Tue May 23 01:25:57 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Semaforo                                        ;
 ; Top-level Entity Name              ; BLOCO_PRINCIPAL                                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 227 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 227 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 245 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 245 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 123 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 123                                             ;
 ; Total pins                         ; 30 / 475 ( 6 % )                                ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 387 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 387 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 405 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 405 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 384     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 402     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -189,26 +189,26 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 227 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 104                    ;
+; Total logic elements                        ; 245 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 122                    ;
 ;     -- Register only                        ; 0                      ;
 ;     -- Combinational with a register        ; 123                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 65                     ;
-;     -- 3 input functions                    ; 6                      ;
+;     -- 4 input functions                    ; 77                     ;
+;     -- 3 input functions                    ; 12                     ;
 ;     -- <=2 input functions                  ; 156                    ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 134                    ;
+;     -- normal mode                          ; 152                    ;
 ;     -- arithmetic mode                      ; 93                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 123 / 34,593 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 123 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 16 / 2,076 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 18 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 30 / 475 ( 6 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )         ;
@@ -224,11 +224,11 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 1%           ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%           ;
 ; Maximum fan-out                             ; 71                     ;
-; Highest non-global fan-out                  ; 34                     ;
-; Total fan-out                               ; 861                    ;
-; Average fan-out                             ; 2.23                   ;
+; Highest non-global fan-out                  ; 39                     ;
+; Total fan-out                               ; 927                    ;
+; Average fan-out                             ; 2.29                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,25 +241,25 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 227 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 104                   ; 0                              ;
+; Total logic elements                        ; 245 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 122                   ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;     -- Combinational with a register        ; 123                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 65                    ; 0                              ;
-;     -- 3 input functions                    ; 6                     ; 0                              ;
+;     -- 4 input functions                    ; 77                    ; 0                              ;
+;     -- 3 input functions                    ; 12                    ; 0                              ;
 ;     -- <=2 input functions                  ; 156                   ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 134                   ; 0                              ;
+;     -- normal mode                          ; 152                   ; 0                              ;
 ;     -- arithmetic mode                      ; 93                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 123                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 123 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 16 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 18 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 30                    ; 0                              ;
@@ -275,8 +275,8 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 861                   ; 0                              ;
-;     -- Registered Connections               ; 198                   ; 0                              ;
+;     -- Total Connections                    ; 927                   ; 0                              ;
+;     -- Registered Connections               ; 199                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -320,14 +320,14 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; MONITOR_IF_RED          ; W19   ; 7        ; 59           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MONITOR_SINAL_CLKO_RED  ; AE22  ; 7        ; 59           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MONITOR_SINAL_FINAL_RED ; AF22  ; 7        ; 59           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[0]              ; G16   ; 4        ; 44           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[1]              ; B9    ; 3        ; 20           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[0]              ; D12   ; 3        ; 24           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[1]              ; J23   ; 5        ; 65           ; 26           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; SAIDA_G[2]              ; B7    ; 3        ; 11           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[3]              ; J22   ; 5        ; 65           ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[4]              ; AF17  ; 7        ; 44           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[5]              ; AA23  ; 6        ; 65           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[6]              ; G24   ; 5        ; 65           ; 28           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; SAIDA_G[7]              ; F14   ; 4        ; 35           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[3]              ; G9    ; 3        ; 7            ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[4]              ; G13   ; 4        ; 35           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[5]              ; W8    ; 8        ; 7            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[6]              ; AD19  ; 7        ; 53           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SAIDA_G[7]              ; K8    ; 2        ; 0            ; 29           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; SAIDA_R[0]              ; AE23  ; 7        ; 63           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SAIDA_R[10]             ; AA13  ; 7        ; 35           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SAIDA_R[11]             ; AC14  ; 7        ; 35           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -355,13 +355,13 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 0 / 64 ( 0 % )   ; 3.3V          ; --           ;
-; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
-; 3        ; 3 / 56 ( 5 % )   ; 3.3V          ; --           ;
-; 4        ; 2 / 58 ( 3 % )   ; 3.3V          ; --           ;
-; 5        ; 2 / 65 ( 3 % )   ; 3.3V          ; --           ;
-; 6        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
+; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
+; 3        ; 4 / 56 ( 7 % )   ; 3.3V          ; --           ;
+; 4        ; 1 / 58 ( 2 % )   ; 3.3V          ; --           ;
+; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
+; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
 ; 7        ; 18 / 58 ( 31 % ) ; 3.3V          ; --           ;
-; 8        ; 4 / 56 ( 7 % )   ; 3.3V          ; --           ;
+; 8        ; 5 / 56 ( 9 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -416,7 +416,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; AA20     ; 230        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA21     ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA22     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AA23     ; 256        ; 6        ; SAIDA_G[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA23     ; 256        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA24     ; 255        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA25     ; 266        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA26     ; 267        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -490,7 +490,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; AD16     ; 201        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD17     ; 208        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AD19     ; 221        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD19     ; 221        ; 7        ; SAIDA_G[6]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD21     ; 238        ; 7        ; SAIDA_R[6]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD22     ; 240        ; 7        ; SAIDA_R[4]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -539,7 +539,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; AF14     ; 187        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AF17     ; 205        ; 7        ; SAIDA_G[4]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF17     ; 205        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF18     ; 211        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF19     ; 213        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF20     ; 223        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -556,7 +556,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; B6       ; 480        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B7       ; 466        ; 3        ; SAIDA_G[2]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B8       ; 458        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B9       ; 452        ; 3        ; SAIDA_G[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -611,7 +611,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; D9       ; 460        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D12      ; 443        ; 3        ; SAIDA_G[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D13      ; 432        ; 3        ; CLOCK_IN                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -665,7 +665,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; F11      ; 454        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F12      ; 440        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F13      ; 423        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F14      ; 425        ; 4        ; SAIDA_G[7]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F14      ; 425        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F15      ; 409        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F16      ; 408        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F17      ; 401        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -686,14 +686,14 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; G6       ; 9          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G7       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G9       ; 471        ; 3        ; SAIDA_G[3]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G13      ; 422        ; 4        ; SAIDA_G[4]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G14      ; 424        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G15      ; 410        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G16      ; 407        ; 4        ; SAIDA_G[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 407        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G17      ; 402        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G18      ; 397        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G19      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -701,7 +701,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; G21      ; 368        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G22      ; 367        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G23      ; 346        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G24      ; 345        ; 5        ; SAIDA_G[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G26      ; 342        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -751,8 +751,8 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; J19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J20      ; 351        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J21      ; 352        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J22      ; 357        ; 5        ; SAIDA_G[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J23      ; 339        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J22      ; 357        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; J23      ; 339        ; 5        ; SAIDA_G[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J26      ; 326        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -763,7 +763,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; K5       ; 22         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K6       ; 21         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K7       ; 27         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K8       ; 26         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K8       ; 26         ; 2        ; SAIDA_G[7]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K9       ; 476        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; K10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -997,7 +997,7 @@ The pin-out file can be found in C:/Users/vieir/OneDrive/Documentos/GitHub/Proje
 ; W5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W6       ; 113        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; W7       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W8       ; 144        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; W8       ; 144        ; 8        ; SAIDA_G[5]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; W9       ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; W10      ; 145        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W11      ; 161        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1088,9 +1088,9 @@ Note: User assignments will override these defaults. The user specified values a
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                            ; Library Name ;
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------+--------------+
-; |BLOCO_PRINCIPAL                   ; 227 (26)    ; 123 (19)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 30   ; 0            ; 104 (7)      ; 0 (0)             ; 123 (19)         ; |BLOCO_PRINCIPAL                               ; work         ;
-;    |CONVERSOR_1KHZ:CONVERSOR|      ; 55 (55)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 33 (33)          ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR      ; work         ;
-;    |TEMPORIZADOR:TEMPORIZADOR_RED| ; 146 (146)   ; 71 (71)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (75)      ; 0 (0)             ; 71 (71)          ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED ; work         ;
+; |BLOCO_PRINCIPAL                   ; 245 (26)    ; 123 (19)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 30   ; 0            ; 122 (7)      ; 0 (0)             ; 123 (19)         ; |BLOCO_PRINCIPAL                               ; work         ;
+;    |CONVERSOR_1KHZ:CONVERSOR|      ; 53 (53)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 33 (33)          ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR      ; work         ;
+;    |TEMPORIZADOR:TEMPORIZADOR_RED| ; 166 (166)   ; 71 (71)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 95 (95)      ; 0 (0)             ; 71 (71)          ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED ; work         ;
 +------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1148,9 +1148,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                      ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_IN                                  ; PIN_D13            ; 33      ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK        ; LCFF_X40_Y32_N1    ; 71      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan1~9 ; LCCOMB_X50_Y24_N18 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK   ; LCFF_X47_Y16_N11   ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK        ; LCFF_X64_Y16_N23   ; 71      ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan1~9 ; LCCOMB_X20_Y31_N12 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK   ; LCFF_X38_Y22_N17   ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 +-------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1160,8 +1160,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                    ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 ; CLOCK_IN                                ; PIN_D13          ; 33      ; Global Clock         ; GCLK11           ; --                        ;
-; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK      ; LCFF_X40_Y32_N1  ; 71      ; Global Clock         ; GCLK10           ; --                        ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK ; LCFF_X47_Y16_N11 ; 19      ; Global Clock         ; GCLK6            ; --                        ;
+; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK      ; LCFF_X64_Y16_N23 ; 71      ; Global Clock         ; GCLK5            ; --                        ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK ; LCFF_X38_Y22_N17 ; 19      ; Global Clock         ; GCLK7            ; --                        ;
 +-----------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1170,27 +1170,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------+
 ; Name                                               ; Fan-Out ;
 +----------------------------------------------------+---------+
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~62              ; 39      ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~62              ; 34      ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~62              ; 33      ;
 ; BITS_RED[0]                                        ; 20      ;
 ; Equal1~1                                           ; 19      ;
 ; Equal1~2                                           ; 16      ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan1~8          ; 12      ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan1~4          ; 12      ;
-; CONVERSOR_1KHZ:CONVERSOR|Equal0~9                  ; 10      ;
-; CONVERSOR_1KHZ:CONVERSOR|Equal0~7                  ; 10      ;
-; CONVERSOR_1KHZ:CONVERSOR|COUNT~0                   ; 8       ;
+; CONVERSOR_1KHZ:CONVERSOR|Equal0~10                 ; 10      ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~1          ; 8       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~12         ; 7       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~10         ; 7       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[0]   ; 6       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan1~9          ; 5       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[0]   ; 5       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[1]   ; 5       ;
 ; BITS_RED[17]                                       ; 5       ;
 ; BITS_RED[16]                                       ; 5       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[3]   ; 4       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[1]   ; 4       ;
-; CONVERSOR_1KHZ:CONVERSOR|Equal0~8                  ; 3       ;
-; CONVERSOR_1KHZ:CONVERSOR|Equal0~4                  ; 3       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[4]   ; 3       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add2~0               ; 3       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[2]   ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[2]   ; 4       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Equal0~1             ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[3]   ; 3       ;
 ; BITS_RED[15]                                       ; 3       ;
 ; BITS_RED[14]                                       ; 3       ;
 ; BITS_RED[13]                                       ; 3       ;
@@ -1206,10 +1204,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BITS_RED[3]                                        ; 3       ;
 ; BITS_RED[2]                                        ; 3       ;
 ; BITS_RED[1]                                        ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~60              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~58              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~56              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~54              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~52              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~50              ; 3       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~48              ; 3       ;
 ; Equal0~2                                           ; 2       ;
 ; Equal0~1                                           ; 2       ;
 ; Equal0~0                                           ; 2       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Equal0~0             ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add2~0               ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[4]   ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~9          ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~7          ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~5          ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~4          ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~2          ; 2       ;
 ; MONITOR_IF                                         ; 2       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK            ; 2       ;
 ; CONVERSOR_1KHZ:CONVERSOR|Add0~62                   ; 2       ;
@@ -1272,11 +1283,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~10              ; 2       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~8               ; 2       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~6               ; 2       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[0]~1 ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~46              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~44              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~42              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~40              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~38              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~36              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~34              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~32              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~30              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~28              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~26              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~24              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~22              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~20              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~18              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~16              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~14              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~12              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~10              ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~8               ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~6               ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~4               ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~2               ; 2       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY[0]~2 ; 1       ;
 ; BITS_RED~22                                        ; 1       ;
 ; BITS_RED[15]~21                                    ; 1       ;
-; CONVERSOR_1KHZ:CONVERSOR|COUNT~10                  ; 1       ;
-; CONVERSOR_1KHZ:CONVERSOR|COUNT~9                   ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~8                   ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~7                   ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~6                   ; 1       ;
@@ -1285,6 +1317,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~3                   ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~2                   ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT~1                   ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|COUNT~0                   ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~30  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~29  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~28  ; 1       ;
@@ -1316,20 +1349,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~2   ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~1   ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER~0   ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add2~3               ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY~0    ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add2~2               ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY~1    ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add2~1               ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BINARY~0    ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK~0               ; 1       ;
-; CONVERSOR_1KHZ:CONVERSOR|Equal0~10                 ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|Equal0~9                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[31]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[30]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[29]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[28]                 ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|Equal0~8                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[27]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[26]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[25]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[24]                 ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|Equal0~7                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[23]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[22]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|Equal0~6                  ; 1       ;
@@ -1340,6 +1375,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[18]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[17]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[16]                 ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|Equal0~4                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|Equal0~3                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[15]                 ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[14]                 ; 1       ;
@@ -1360,6 +1396,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[0]                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[1]                  ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|COUNT[2]                  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~37  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~36  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~35  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~34  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~33  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~32  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~31  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~30  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~29  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~28  ; 1       ;
@@ -1368,6 +1411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~25  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~24  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~23  ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~11         ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~22  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~21  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO~20  ; 1       ;
@@ -1450,9 +1494,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER[8]  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER[9]  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER[10] ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Equal0~1             ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|Equal0~0             ; 1       ;
 ; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK                 ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK~0          ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~8          ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~6          ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~3          ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|LessThan0~0          ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO[0]  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO[1]  ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO[2]  ; 1       ;
@@ -1552,65 +1600,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~1               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add0~0               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~61              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~60              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~59              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~58              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~57              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~56              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~55              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~54              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~53              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~52              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~51              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~50              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~49              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~48              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~47              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~46              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~45              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~44              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~43              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~42              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~41              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~40              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~39              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~38              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~37              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~36              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~35              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~34              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~33              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~32              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~31              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~30              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~29              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~28              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~27              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~26              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~25              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~24              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~23              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~22              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~21              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~20              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~19              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~18              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~17              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~16              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~15              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~14              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~13              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~12              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~11              ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~10              ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~9               ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~8               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~7               ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~6               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~5               ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~4               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~3               ; 1       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~2               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~1               ; 1       ;
 ; TEMPORIZADOR:TEMPORIZADOR_RED|Add1~0               ; 1       ;
 +----------------------------------------------------+---------+
@@ -1621,60 +1639,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 261 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 294 / 94,460 ( < 1 % ) ;
 ; C16 interconnects           ; 2 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 99 / 60,840 ( < 1 % )  ;
-; Direct links                ; 138 / 94,460 ( < 1 % ) ;
+; C4 interconnects            ; 87 / 60,840 ( < 1 % )  ;
+; Direct links                ; 149 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 3 / 16 ( 19 % )        ;
-; Local interconnects         ; 72 / 33,216 ( < 1 % )  ;
-; R24 interconnects           ; 3 / 3,091 ( < 1 % )    ;
-; R4 interconnects            ; 129 / 81,294 ( < 1 % ) ;
+; Local interconnects         ; 86 / 33,216 ( < 1 % )  ;
+; R24 interconnects           ; 4 / 3,091 ( < 1 % )    ;
+; R4 interconnects            ; 153 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.19) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 13.61) ; Number of LABs  (Total = 18) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
+; 10                                          ; 3                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 12                           ;
+; 15                                          ; 1                            ;
+; 16                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.81) ; Number of LABs  (Total = 16) ;
+; LAB-wide Signals  (Average = 0.83) ; Number of LABs  (Total = 18) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 13                           ;
+; 1 Clock                            ; 15                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.88) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 20.44) ; Number of LABs  (Total = 18) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
@@ -1688,81 +1706,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 15                                           ; 0                            ;
 ; 16                                           ; 2                            ;
 ; 17                                           ; 3                            ;
-; 18                                           ; 0                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 3                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 3                            ;
+; 27                                           ; 2                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
+; 30                                           ; 1                            ;
 ; 31                                           ; 0                            ;
-; 32                                           ; 3                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 12.88) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 11.78) ; Number of LABs  (Total = 18) ;
 +--------------------------------------------------+------------------------------+
 ; 0                                                ; 0                            ;
 ; 1                                                ; 0                            ;
 ; 2                                                ; 0                            ;
 ; 3                                                ; 1                            ;
 ; 4                                                ; 0                            ;
-; 5                                                ; 1                            ;
+; 5                                                ; 0                            ;
 ; 6                                                ; 0                            ;
-; 7                                                ; 0                            ;
+; 7                                                ; 2                            ;
 ; 8                                                ; 1                            ;
-; 9                                                ; 0                            ;
-; 10                                               ; 1                            ;
+; 9                                                ; 1                            ;
+; 10                                               ; 3                            ;
 ; 11                                               ; 0                            ;
-; 12                                               ; 1                            ;
-; 13                                               ; 2                            ;
-; 14                                               ; 1                            ;
-; 15                                               ; 0                            ;
-; 16                                               ; 8                            ;
+; 12                                               ; 2                            ;
+; 13                                               ; 1                            ;
+; 14                                               ; 0                            ;
+; 15                                               ; 1                            ;
+; 16                                               ; 6                            ;
 +--------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.25) ; Number of LABs  (Total = 16) ;
+; Number of Distinct Inputs  (Average = 14.33) ; Number of LABs  (Total = 18) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 3                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 2                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 2                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 1                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 4                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1850,7 +1869,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 17 total pin(s) used --  41 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 4 total pin(s) used --  52 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1858,11 +1877,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X44_Y12 to location X54_Y23
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 29 output pins without output pin load capacitance assignment
     Info (306007): Pin "MONITOR_SINAL_CLKO_RED" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1901,8 +1920,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/output_files/Semaforo.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Tue May 23 00:15:49 2023
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Tue May 23 01:25:57 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
