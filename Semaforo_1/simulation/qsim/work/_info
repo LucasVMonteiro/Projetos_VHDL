@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\qsim
+vCONVERSOR_1KHZ
+Z1 !s100 <hD7cN=A=C<b=3;JjCTcG0
+Z2 IS6PO1d:MY:1>fj=QmZ8ih0
+Z3 VJ23DBKB3Uk<c[:B3YmMh02
+Z4 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\qsim
+Z5 w1684802468
+Z6 8Semaforo.vo
+Z7 FSemaforo.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Semaforo.vo|
+Z10 o-work work -O0
+Z11 n@c@o@n@v@e@r@s@o@r_1@k@h@z
+!i10b 1
+!s85 0
+Z12 !s108 1684802470.562000
+Z13 !s107 Semaforo.vo|
+!s101 -O0
+vCONVERSOR_1KHZ_vlg_check_tst
+!i10b 1
+Z14 !s100 YIk8>[Yzj>_:JbYi;dVeX1
+Z15 IQMoSaabbHjBLNakdTc?_R0
+Z16 V>1`Tn3X@]A531ho54P>:?1
+R4
+R5
+Z17 8Semaforo.vt
+Z18 FSemaforo.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1684802470.985000
+Z20 !s107 Semaforo.vt|
+Z21 !s90 -work|work|Semaforo.vt|
+!s101 -O0
+R10
+Z22 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_check_tst
+vCONVERSOR_1KHZ_vlg_sample_tst
+!i10b 1
+Z23 !s100 NM=WL;TO63=lU5`>R1PL?1
+Z24 I8U9aMCE6QRePD7RV4AAGd3
+Z25 V]a_>3NNTF:0cQJ:0BCCc03
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_sample_tst
+vCONVERSOR_1KHZ_vlg_vec_tst
+!i10b 1
+!s100 5ASD1Z0W7][`c37R=85_a1
+Ih6[W4O1z:Igdll6jAJBbC2
+Z27 Vo@P9HCH2IjliPj8K:=7Mo2
+R4
+R5
+R17
+R18
+Z28 L0 152
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 n@c@o@n@v@e@r@s@o@r_1@k@h@z_vlg_vec_tst
