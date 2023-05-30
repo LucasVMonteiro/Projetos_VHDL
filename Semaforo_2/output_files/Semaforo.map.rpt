@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Semaforo
-Mon May 29 20:59:36 2023
+Mon May 29 21:51:21 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 29 20:59:36 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 29 21:51:21 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Semaforo                                        ;
 ; Top-level Entity Name              ; BLOCO_PRINCIPAL                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 247                                             ;
-;     Total combinational functions  ; 247                                             ;
-;     Dedicated logic registers      ; 149                                             ;
-; Total registers                    ; 149                                             ;
-; Total pins                         ; 23                                              ;
+; Total logic elements               ; 396                                             ;
+;     Total combinational functions  ; 396                                             ;
+;     Dedicated logic registers      ; 253                                             ;
+; Total registers                    ; 253                                             ;
+; Total pins                         ; 27                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -170,28 +170,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 247    ;
+; Estimated Total logic elements              ; 396    ;
 ;                                             ;        ;
-; Total combinational functions               ; 247    ;
+; Total combinational functions               ; 396    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 60     ;
-;     -- 3 input functions                    ; 58     ;
-;     -- <=2 input functions                  ; 129    ;
+;     -- 4 input functions                    ; 101    ;
+;     -- 3 input functions                    ; 106    ;
+;     -- <=2 input functions                  ; 189    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 154    ;
-;     -- arithmetic mode                      ; 93     ;
+;     -- normal mode                          ; 241    ;
+;     -- arithmetic mode                      ; 155    ;
 ;                                             ;        ;
-; Total registers                             ; 149    ;
-;     -- Dedicated logic registers            ; 149    ;
+; Total registers                             ; 253    ;
+;     -- Dedicated logic registers            ; 253    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 23     ;
+; I/O pins                                    ; 27     ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; CLK_IN ;
-; Maximum fan-out                             ; 99     ;
-; Total fan-out                               ; 1020   ;
-; Average fan-out                             ; 2.43   ;
+; Maximum fan-out                             ; 163    ;
+; Total fan-out                               ; 1692   ;
+; Average fan-out                             ; 2.50   ;
 +---------------------------------------------+--------+
 
 
@@ -200,7 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |BLOCO_PRINCIPAL           ; 247 (247)         ; 149 (149)    ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |BLOCO_PRINCIPAL    ; work         ;
+; |BLOCO_PRINCIPAL           ; 396 (396)         ; 253 (253)    ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |BLOCO_PRINCIPAL    ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -210,12 +210,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 149   ;
+; Total registers                              ; 253   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 33    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -243,9 +243,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDS_R[15]                              ; 3       ;
 ; LEDS_R[16]                              ; 5       ;
 ; LEDS_R[17]                              ; 5       ;
-; CONTADOR_CLOCK_RED[0]                   ; 1       ;
 ; CONTADOR_SEGUNDOS[0]                    ; 1       ;
-; Total number of inverted registers = 20 ;         ;
+; CONTADOR_CLOCK_GREEN[0]                 ; 1       ;
+; CONTADOR_CLOCK_RED[0]                   ; 1       ;
+; Total number of inverted registers = 21 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -254,7 +255,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |BLOCO_PRINCIPAL|BITS_R_DESLOCADOS[11] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |BLOCO_PRINCIPAL|BITS_R_DESLOCADOS[25] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |BLOCO_PRINCIPAL|BITS_G_DESLOCADOS[25] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
@@ -273,25 +275,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 29 20:59:35 2023
+    Info: Processing started: Mon May 29 21:51:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Semaforo -c Semaforo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bloco_principal.vhd
     Info (12022): Found design unit 1: BLOCO_PRINCIPAL-LOGICA
     Info (12023): Found entity 1: BLOCO_PRINCIPAL
 Info (12127): Elaborating entity "BLOCO_PRINCIPAL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at BLOCO_PRINCIPAL.vhd(12): used implicit default value for signal "MONITOR_FLAG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MONITOR_FLAG" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 485 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 282 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Mon May 29 20:59:36 2023
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 458 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Mon May 29 21:51:21 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
