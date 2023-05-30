@@ -3,24 +3,32 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -5.571
-TNS   : -316.727
+Slack : -10.556
+TNS   : -1634.470
 
 Type  : Slow Model Setup 'CLOCK_IN'
-Slack : -5.100
-TNS   : -103.416
+Slack : -4.964
+TNS   : -95.898
 
 Type  : Slow Model Setup 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
-Slack : -1.590
-TNS   : -29.777
+Slack : -2.001
+TNS   : -32.999
 
-Type  : Slow Model Hold 'CLOCK_IN'
-Slack : -2.511
-TNS   : -2.511
+Type  : Slow Model Setup 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : -1.424
+TNS   : -10.135
 
 Type  : Slow Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -2.295
-TNS   : -2.295
+Slack : -2.927
+TNS   : -93.207
+
+Type  : Slow Model Hold 'CLOCK_IN'
+Slack : -2.508
+TNS   : -2.508
+
+Type  : Slow Model Hold 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : 0.391
+TNS   : 0.000
 
 Type  : Slow Model Hold 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : 0.391
@@ -32,31 +40,43 @@ TNS   : -34.380
 
 Type  : Slow Model Minimum Pulse Width 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
 Slack : -0.500
-TNS   : -71.000
+TNS   : -242.000
 
 Type  : Slow Model Minimum Pulse Width 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : -0.500
-TNS   : -19.000
+TNS   : -18.000
+
+Type  : Slow Model Minimum Pulse Width 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : -0.500
+TNS   : -8.000
 
 Type  : Fast Model Setup 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -2.110
-TNS   : -112.173
+Slack : -4.397
+TNS   : -623.322
 
 Type  : Fast Model Setup 'CLOCK_IN'
-Slack : -1.832
-TNS   : -31.050
+Slack : -1.792
+TNS   : -28.411
 
 Type  : Fast Model Setup 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
-Slack : -0.216
-TNS   : -3.626
+Slack : -0.383
+TNS   : -5.465
 
-Type  : Fast Model Hold 'CLOCK_IN'
-Slack : -1.559
-TNS   : -1.559
+Type  : Fast Model Setup 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : -0.154
+TNS   : -0.803
 
 Type  : Fast Model Hold 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
-Slack : -1.392
-TNS   : -1.392
+Slack : -1.675
+TNS   : -67.762
+
+Type  : Fast Model Hold 'CLOCK_IN'
+Slack : -1.555
+TNS   : -1.555
+
+Type  : Fast Model Hold 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Hold 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : 0.215
@@ -68,10 +88,14 @@ TNS   : -34.380
 
 Type  : Fast Model Minimum Pulse Width 'CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK'
 Slack : -0.500
-TNS   : -71.000
+TNS   : -242.000
 
 Type  : Fast Model Minimum Pulse Width 'TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK'
 Slack : -0.500
-TNS   : -19.000
+TNS   : -18.000
+
+Type  : Fast Model Minimum Pulse Width 'TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK'
+Slack : -0.500
+TNS   : -8.000
 
 ------------------------------------------------------------

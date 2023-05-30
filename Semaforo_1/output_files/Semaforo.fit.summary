@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue May 23 01:25:57 2023
+Fitter Status : Successful - Fri May 26 17:39:48 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Semaforo
 Top-level Entity Name : BLOCO_PRINCIPAL
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 245 / 33,216 ( < 1 % )
-    Total combinational functions : 245 / 33,216 ( < 1 % )
-    Dedicated logic registers : 123 / 33,216 ( < 1 % )
-Total registers : 123
-Total pins : 30 / 475 ( 6 % )
+Total logic elements : 502 / 33,216 ( 2 % )
+    Total combinational functions : 502 / 33,216 ( 2 % )
+    Dedicated logic registers : 301 / 33,216 ( < 1 % )
+Total registers : 301
+Total pins : 33 / 475 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 0 / 483,840 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )

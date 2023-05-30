@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\modelsim
+vBLOCO_PRINCIPAL
+!i10b 1
+!s100 B@bm^G>PGUGaef<5AT`gZ1
+I6mT]?eX?>UYzQ0O]VE]o_1
+Vd[M:z<;?M47OjHUN6IZiP3
+Z1 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\Semaforo_1\simulation\modelsim
+w1685133596
+8Semaforo.vo
+FSemaforo.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1685134851.022000
+!s107 Semaforo.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Semaforo.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+n@b@l@o@c@o_@p@r@i@n@c@i@p@a@l

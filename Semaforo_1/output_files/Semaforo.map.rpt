@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Semaforo
-Tue May 23 01:25:52 2023
+Fri May 26 17:39:37 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,12 +13,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "TEMPORIZADOR:TEMPORIZADOR_RED"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "TEMPORIZADOR:TEMPORIZADOR_GREEN"
+ 13. Port Connectivity Checks: "TEMPORIZADOR:TEMPORIZADOR_RED"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +46,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 23 01:25:52 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 26 17:39:37 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Semaforo                                        ;
 ; Top-level Entity Name              ; BLOCO_PRINCIPAL                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 245                                             ;
-;     Total combinational functions  ; 245                                             ;
-;     Dedicated logic registers      ; 123                                             ;
-; Total registers                    ; 123                                             ;
-; Total pins                         ; 30                                              ;
+; Total logic elements               ; 502                                             ;
+;     Total combinational functions  ; 502                                             ;
+;     Dedicated logic registers      ; 301                                             ;
+; Total registers                    ; 301                                             ;
+; Total pins                         ; 33                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -69,6 +71,7 @@ applicable agreement for further details.
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; BLOCO_PRINCIPAL    ; Semaforo           ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -162,9 +165,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; TEMPORIZADOR.vhd                 ; yes             ; User VHDL File  ; C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/TEMPORIZADOR.vhd    ;         ;
 ; BLOCO_PRINCIPAL.vhd              ; yes             ; User VHDL File  ; C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/BLOCO_PRINCIPAL.vhd ;         ;
 ; CONVERSOR_1KHZ.vhd               ; yes             ; User VHDL File  ; C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/CONVERSOR_1KHZ.vhd  ;         ;
+; TEMPORIZADOR.vhd                 ; yes             ; User VHDL File  ; C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/TEMPORIZADOR.vhd    ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 
 
@@ -173,41 +176,83 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------------+
 ; Resource                                    ; Usage                              ;
 +---------------------------------------------+------------------------------------+
-; Estimated Total logic elements              ; 245                                ;
+; Estimated Total logic elements              ; 502                                ;
 ;                                             ;                                    ;
-; Total combinational functions               ; 245                                ;
+; Total combinational functions               ; 502                                ;
 ; Logic element usage by number of LUT inputs ;                                    ;
-;     -- 4 input functions                    ; 77                                 ;
-;     -- 3 input functions                    ; 12                                 ;
-;     -- <=2 input functions                  ; 156                                ;
+;     -- 4 input functions                    ; 174                                ;
+;     -- 3 input functions                    ; 32                                 ;
+;     -- <=2 input functions                  ; 296                                ;
 ;                                             ;                                    ;
 ; Logic elements by mode                      ;                                    ;
-;     -- normal mode                          ; 152                                ;
-;     -- arithmetic mode                      ; 93                                 ;
+;     -- normal mode                          ; 255                                ;
+;     -- arithmetic mode                      ; 247                                ;
 ;                                             ;                                    ;
-; Total registers                             ; 123                                ;
-;     -- Dedicated logic registers            ; 123                                ;
+; Total registers                             ; 301                                ;
+;     -- Dedicated logic registers            ; 301                                ;
 ;     -- I/O registers                        ; 0                                  ;
 ;                                             ;                                    ;
-; I/O pins                                    ; 30                                 ;
+; I/O pins                                    ; 33                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                                  ;
 ; Maximum fan-out node                        ; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK ;
-; Maximum fan-out                             ; 72                                 ;
-; Total fan-out                               ; 924                                ;
-; Average fan-out                             ; 2.32                               ;
+; Maximum fan-out                             ; 243                                ;
+; Total fan-out                               ; 2062                               ;
+; Average fan-out                             ; 2.47                               ;
 +---------------------------------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |BLOCO_PRINCIPAL                   ; 245 (26)          ; 123 (19)     ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |BLOCO_PRINCIPAL                               ; work         ;
-;    |CONVERSOR_1KHZ:CONVERSOR|      ; 53 (53)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR      ; work         ;
-;    |TEMPORIZADOR:TEMPORIZADOR_RED| ; 166 (166)         ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
+; |BLOCO_PRINCIPAL                     ; 502 (38)          ; 301 (26)     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |BLOCO_PRINCIPAL                                 ; work         ;
+;    |CONVERSOR_1KHZ:CONVERSOR|        ; 53 (53)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|CONVERSOR_1KHZ:CONVERSOR        ; work         ;
+;    |TEMPORIZADOR:TEMPORIZADOR_GREEN| ; 217 (217)         ; 137 (137)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_GREEN ; work         ;
+;    |TEMPORIZADOR:TEMPORIZADOR_RED|   ; 194 (194)         ; 105 (105)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED   ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                          ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; Register name                                                         ; Reason for Removal                                                                  ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[0]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[0]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[1]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[1]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[2]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[2]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[3]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[3]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[4]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[4]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[5]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[5]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[6]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[6]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[7]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[7]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[8]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[8]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[9]  ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[9]  ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[10] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[10] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[11] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[11] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[12] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[12] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[13] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[13] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[14] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[14] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[15] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[15] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[16] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[16] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[17] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[17] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[18] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[18] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[19] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[19] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[20] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[20] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[21] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[21] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[22] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[22] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[23] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[23] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[24] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[24] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[25] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[25] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[26] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[26] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[27] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[27] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[28] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[28] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[29] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[29] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[30] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[30] ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[31] ; Merged with TEMPORIZADOR:TEMPORIZADOR_GREEN|ATRASO_INTENCIONAL_PARA_SINAL_FINAL[31] ;
+; Total Number of Removed Registers = 32                                ;                                                                                     ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -215,55 +260,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 123   ;
+; Total registers                              ; 301   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 45    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK             ; 21      ;
+; TEMPORIZADOR:TEMPORIZADOR_GREEN|SINAL_CLK           ; 11      ;
+; BITS_RED[0]                                         ; 5       ;
+; BITS_RED[1]                                         ; 3       ;
+; BITS_RED[2]                                         ; 3       ;
+; BITS_RED[3]                                         ; 3       ;
+; BITS_RED[4]                                         ; 3       ;
+; BITS_RED[5]                                         ; 3       ;
+; BITS_RED[6]                                         ; 3       ;
+; BITS_RED[7]                                         ; 3       ;
+; BITS_RED[8]                                         ; 3       ;
+; BITS_RED[9]                                         ; 3       ;
+; BITS_RED[10]                                        ; 3       ;
+; BITS_RED[11]                                        ; 3       ;
+; BITS_RED[12]                                        ; 3       ;
+; BITS_RED[13]                                        ; 3       ;
+; BITS_RED[14]                                        ; 3       ;
+; BITS_RED[15]                                        ; 3       ;
+; BITS_RED[16]                                        ; 5       ;
+; BITS_RED[17]                                        ; 5       ;
+; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK                  ; 243     ;
+; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO[0]   ; 1       ;
+; TEMPORIZADOR:TEMPORIZADOR_GREEN|CONTADOR_PERIODO[0] ; 1       ;
+; CONVERSOR_1KHZ:CONVERSOR|COUNT[0]                   ; 1       ;
+; Total number of inverted registers = 24             ;         ;
++-----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_BITS_DESLOCADOS[23]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |BLOCO_PRINCIPAL|TEMPORIZADOR:TEMPORIZADOR_GREEN|CONTADOR_BITS_DESLOCADOS[5] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |BLOCO_PRINCIPAL|BITS_GREEN[5]                                               ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |BLOCO_PRINCIPAL|BITS_RED[5]                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------+
-; Inverted Register Statistics                                ;
-+---------------------------------------------------+---------+
-; Inverted Register                                 ; Fan out ;
-+---------------------------------------------------+---------+
-; TEMPORIZADOR:TEMPORIZADOR_RED|SINAL_CLK           ; 21      ;
-; BITS_RED[0]                                       ; 20      ;
-; BITS_RED[1]                                       ; 3       ;
-; BITS_RED[2]                                       ; 3       ;
-; BITS_RED[3]                                       ; 3       ;
-; BITS_RED[4]                                       ; 3       ;
-; BITS_RED[5]                                       ; 3       ;
-; BITS_RED[6]                                       ; 3       ;
-; BITS_RED[7]                                       ; 3       ;
-; BITS_RED[8]                                       ; 3       ;
-; BITS_RED[9]                                       ; 3       ;
-; BITS_RED[10]                                      ; 3       ;
-; BITS_RED[11]                                      ; 3       ;
-; BITS_RED[12]                                      ; 3       ;
-; BITS_RED[13]                                      ; 3       ;
-; BITS_RED[14]                                      ; 3       ;
-; BITS_RED[15]                                      ; 3       ;
-; BITS_RED[16]                                      ; 5       ;
-; BITS_RED[17]                                      ; 5       ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_PERIODO[0] ; 1       ;
-; CONVERSOR_1KHZ:CONVERSOR|SINAL_CLK                ; 72      ;
-; TEMPORIZADOR:TEMPORIZADOR_RED|CONTADOR_INTEGER[0] ; 1       ;
-; CONVERSOR_1KHZ:CONVERSOR|COUNT[0]                 ; 1       ;
-; Total number of inverted registers = 23           ;         ;
-+---------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |BLOCO_PRINCIPAL|BITS_RED[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Port Connectivity Checks: "TEMPORIZADOR:TEMPORIZADOR_GREEN" ;
++--------------+-------+----------+---------------------------+
+; Port         ; Type  ; Severity ; Details                   ;
++--------------+-------+----------+---------------------------+
+; tempo[4..3]  ; Input ; Info     ; Stuck at GND              ;
+; tempo[2]     ; Input ; Info     ; Stuck at VCC              ;
+; tempo[1]     ; Input ; Info     ; Stuck at GND              ;
+; tempo[0]     ; Input ; Info     ; Stuck at VCC              ;
+; n_bits[2..0] ; Input ; Info     ; Stuck at GND              ;
+; n_bits[4]    ; Input ; Info     ; Stuck at GND              ;
+; n_bits[3]    ; Input ; Info     ; Stuck at VCC              ;
+; chip_select  ; Input ; Info     ; Stuck at VCC              ;
++--------------+-------+----------+---------------------------+
 
 
 +-----------------------------------------------------------+
@@ -271,14 +336,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-------+----------+-------------------------+
 ; Port         ; Type  ; Severity ; Details                 ;
 +--------------+-------+----------+-------------------------+
-; tempo[2..1]  ; Input ; Info     ; Stuck at VCC            ;
 ; tempo[4..3]  ; Input ; Info     ; Stuck at GND            ;
-; tempo[0]     ; Input ; Info     ; Stuck at GND            ;
+; tempo[2]     ; Input ; Info     ; Stuck at VCC            ;
+; tempo[1]     ; Input ; Info     ; Stuck at GND            ;
+; tempo[0]     ; Input ; Info     ; Stuck at VCC            ;
 ; n_bits[3..2] ; Input ; Info     ; Stuck at GND            ;
 ; n_bits[4]    ; Input ; Info     ; Stuck at VCC            ;
 ; n_bits[1]    ; Input ; Info     ; Stuck at VCC            ;
 ; n_bits[0]    ; Input ; Info     ; Stuck at GND            ;
-; chip_select  ; Input ; Info     ; Stuck at VCC            ;
+; chip_select  ; Input ; Info     ; Stuck at GND            ;
 +--------------+-------+----------+-------------------------+
 
 
@@ -287,7 +353,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -297,45 +363,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 23 01:25:50 2023
+    Info: Processing started: Fri May 26 17:39:34 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Semaforo -c Semaforo
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file temporizador.vhd
-    Info (12022): Found design unit 1: TEMPORIZADOR-LOGICA
-    Info (12023): Found entity 1: TEMPORIZADOR
 Info (12021): Found 2 design units, including 1 entities, in source file bloco_principal.vhd
     Info (12022): Found design unit 1: BLOCO_PRINCIPAL-LOGICA
     Info (12023): Found entity 1: BLOCO_PRINCIPAL
 Info (12021): Found 2 design units, including 1 entities, in source file conversor_1khz.vhd
     Info (12022): Found design unit 1: CONVERSOR_1KHZ-LOGIC
     Info (12023): Found entity 1: CONVERSOR_1KHZ
+Info (12021): Found 2 design units, including 1 entities, in source file temporizador.vhd
+    Info (12022): Found design unit 1: TEMPORIZADOR-LOGICA
+    Info (12023): Found entity 1: TEMPORIZADOR
 Info (12127): Elaborating entity "BLOCO_PRINCIPAL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at BLOCO_PRINCIPAL.vhd(16): used implicit default value for signal "SAIDA_G" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "CONVERSOR_1KHZ" for hierarchy "CONVERSOR_1KHZ:CONVERSOR"
 Info (12128): Elaborating entity "TEMPORIZADOR" for hierarchy "TEMPORIZADOR:TEMPORIZADOR_RED"
-Warning (10542): VHDL Variable Declaration warning at TEMPORIZADOR.vhd(44): used initial value expression for variable "PERIODO_CONTAGEM" because variable was never assigned a value
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(44): signal "TEMPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(44): signal "N_BITS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(48): signal "CHIP_SELECT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SAIDA_G[0]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[1]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[2]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[3]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[4]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[5]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[6]" is stuck at GND
-    Warning (13410): Pin "SAIDA_G[7]" is stuck at GND
+Warning (10542): VHDL Variable Declaration warning at TEMPORIZADOR.vhd(51): used initial value expression for variable "PERIODO_CONTAGEM" because variable was never assigned a value
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(51): signal "TEMPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(51): signal "N_BITS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10542): VHDL Variable Declaration warning at TEMPORIZADOR.vhd(53): used initial value expression for variable "BITS_DESLOCADOS_POR_S" because variable was never assigned a value
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(53): signal "N_BITS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at TEMPORIZADOR.vhd(53): signal "TEMPO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 300 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 613 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 270 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Tue May 23 01:25:52 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 580 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Fri May 26 17:39:37 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

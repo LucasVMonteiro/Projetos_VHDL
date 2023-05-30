@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Semaforo
-Tue May 23 01:26:02 2023
+Fri May 26 17:39:56 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 23 01:26:02 2023 ;
+; EDA Netlist Writer Status ; Successful - Fri May 26 17:39:56 2023 ;
 ; Revision Name             ; Semaforo                              ;
 ; Top-level Entity Name     ; BLOCO_PRINCIPAL                       ;
 ; Family                    ; Cyclone II                            ;
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 23 01:26:02 2023
+    Info: Processing started: Fri May 26 17:39:55 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Semaforo -c Semaforo
 Info (204019): Generated file Semaforo.vo in folder "C:/Users/vieir/OneDrive/Documentos/GitHub/Projetos_VHDL/Semaforo_1/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4523 megabytes
-    Info: Processing ended: Tue May 23 01:26:02 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Fri May 26 17:39:56 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

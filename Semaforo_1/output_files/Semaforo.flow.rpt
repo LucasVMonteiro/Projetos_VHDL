@@ -1,5 +1,5 @@
 Flow report for Semaforo
-Tue May 23 01:26:02 2023
+Fri May 26 17:39:56 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue May 23 01:26:02 2023           ;
+; Flow Status                        ; Successful - Fri May 26 17:39:56 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Semaforo                                        ;
 ; Top-level Entity Name              ; BLOCO_PRINCIPAL                                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 245 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 245 / 33,216 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 123 / 33,216 ( < 1 % )                          ;
-; Total registers                    ; 123                                             ;
-; Total pins                         ; 30 / 475 ( 6 % )                                ;
+; Total logic elements               ; 502 / 33,216 ( 2 % )                            ;
+;     Total combinational functions  ; 502 / 33,216 ( 2 % )                            ;
+;     Dedicated logic registers      ; 301 / 33,216 ( < 1 % )                          ;
+; Total registers                    ; 301                                             ;
+; Total pins                         ; 33 / 475 ( 7 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2023 01:25:51 ;
+; Start date & time ; 05/26/2023 17:39:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Semaforo            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name     ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 198208555874071.168481595125968       ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 198208555874071.168513357414880       ; --            ; --              ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --              ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --              ; --             ;
@@ -88,6 +88,7 @@ applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --              ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --              ; --             ;
 ; TOP_LEVEL_ENTITY                    ; BLOCO_PRINCIPAL                       ; Semaforo      ; --              ; --             ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                   ; --            ; --              ; --             ;
 +-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
 
 
@@ -96,12 +97,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4647 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 4883 MB             ; 00:00:04                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4563 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4511 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 4882 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4559 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4511 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
