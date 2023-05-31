@@ -1,0 +1,1131 @@
+TimeQuest Timing Analyzer report for Semaforo
+Tue May 30 19:23:17 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK_IN'
+ 12. Slow Model Hold: 'CLK_IN'
+ 13. Slow Model Minimum Pulse Width: 'CLK_IN'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'CLK_IN'
+ 22. Fast Model Hold: 'CLK_IN'
+ 23. Fast Model Minimum Pulse Width: 'CLK_IN'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Semaforo                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; CLK_IN     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_IN } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 152.95 MHz ; 152.95 MHz      ; CLK_IN     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; CLK_IN ; -5.538 ; -176.690      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; CLK_IN ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; CLK_IN ; -1.380 ; -47.380              ;
++--------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK_IN'                                                                                        ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; -5.538 ; CONTADOR_CLK[0] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.575      ;
+; -5.538 ; CONTADOR_CLK[0] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.575      ;
+; -5.538 ; CONTADOR_CLK[0] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.575      ;
+; -5.538 ; CONTADOR_CLK[0] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.575      ;
+; -5.538 ; CONTADOR_CLK[0] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.575      ;
+; -5.534 ; CONTADOR_CLK[0] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.571      ;
+; -5.534 ; CONTADOR_CLK[0] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.571      ;
+; -5.534 ; CONTADOR_CLK[0] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.571      ;
+; -5.534 ; CONTADOR_CLK[0] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.571      ;
+; -5.534 ; CONTADOR_CLK[0] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.571      ;
+; -5.470 ; CONTADOR_CLK[0] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.508      ;
+; -5.470 ; CONTADOR_CLK[0] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.508      ;
+; -5.470 ; CONTADOR_CLK[0] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.508      ;
+; -5.316 ; CONTADOR_CLK[0] ; CONTADOR_CLK[13] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.352      ;
+; -5.315 ; CONTADOR_CLK[0] ; CONTADOR_CLK[19] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.351      ;
+; -5.291 ; CONTADOR_CLK[1] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.328      ;
+; -5.291 ; CONTADOR_CLK[1] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.328      ;
+; -5.291 ; CONTADOR_CLK[1] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.328      ;
+; -5.291 ; CONTADOR_CLK[1] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.328      ;
+; -5.291 ; CONTADOR_CLK[1] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.328      ;
+; -5.287 ; CONTADOR_CLK[1] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.324      ;
+; -5.287 ; CONTADOR_CLK[1] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.324      ;
+; -5.287 ; CONTADOR_CLK[1] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.324      ;
+; -5.287 ; CONTADOR_CLK[1] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.324      ;
+; -5.287 ; CONTADOR_CLK[1] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.324      ;
+; -5.256 ; CONTADOR_CLK[0] ; CONTADOR_CLK[14] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.292      ;
+; -5.223 ; CONTADOR_CLK[1] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.261      ;
+; -5.223 ; CONTADOR_CLK[1] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.261      ;
+; -5.223 ; CONTADOR_CLK[1] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.261      ;
+; -5.216 ; CONTADOR_CLK[2] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.253      ;
+; -5.216 ; CONTADOR_CLK[2] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.253      ;
+; -5.216 ; CONTADOR_CLK[2] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.253      ;
+; -5.216 ; CONTADOR_CLK[2] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.253      ;
+; -5.216 ; CONTADOR_CLK[2] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.253      ;
+; -5.212 ; CONTADOR_CLK[2] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.249      ;
+; -5.212 ; CONTADOR_CLK[2] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.249      ;
+; -5.212 ; CONTADOR_CLK[2] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.249      ;
+; -5.212 ; CONTADOR_CLK[2] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.249      ;
+; -5.212 ; CONTADOR_CLK[2] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.249      ;
+; -5.203 ; CONTADOR_CLK[0] ; CONTADOR_CLK[0]  ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.239      ;
+; -5.201 ; CONTADOR_CLK[0] ; CONTADOR_CLK[17] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.237      ;
+; -5.196 ; CONTADOR_CLK[0] ; CONTADOR_CLK[15] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.232      ;
+; -5.196 ; CONTADOR_CLK[0] ; CONTADOR_CLK[7]  ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.232      ;
+; -5.195 ; CONTADOR_CLK[0] ; CONTADOR_CLK[12] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.231      ;
+; -5.185 ; CONTADOR_CLK[3] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.222      ;
+; -5.185 ; CONTADOR_CLK[3] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.222      ;
+; -5.185 ; CONTADOR_CLK[3] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.222      ;
+; -5.185 ; CONTADOR_CLK[3] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.222      ;
+; -5.185 ; CONTADOR_CLK[3] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.222      ;
+; -5.181 ; CONTADOR_CLK[3] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.218      ;
+; -5.181 ; CONTADOR_CLK[3] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.218      ;
+; -5.181 ; CONTADOR_CLK[3] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.218      ;
+; -5.181 ; CONTADOR_CLK[3] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.218      ;
+; -5.181 ; CONTADOR_CLK[3] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.218      ;
+; -5.148 ; CONTADOR_CLK[2] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.186      ;
+; -5.148 ; CONTADOR_CLK[2] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.186      ;
+; -5.148 ; CONTADOR_CLK[2] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.186      ;
+; -5.117 ; CONTADOR_CLK[3] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.155      ;
+; -5.117 ; CONTADOR_CLK[3] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.155      ;
+; -5.117 ; CONTADOR_CLK[3] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.155      ;
+; -5.075 ; CONTADOR_CLK[4] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.112      ;
+; -5.075 ; CONTADOR_CLK[4] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.112      ;
+; -5.075 ; CONTADOR_CLK[4] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.112      ;
+; -5.075 ; CONTADOR_CLK[4] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.112      ;
+; -5.075 ; CONTADOR_CLK[4] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.112      ;
+; -5.071 ; CONTADOR_CLK[4] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.108      ;
+; -5.071 ; CONTADOR_CLK[4] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.108      ;
+; -5.071 ; CONTADOR_CLK[4] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.108      ;
+; -5.071 ; CONTADOR_CLK[4] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.108      ;
+; -5.071 ; CONTADOR_CLK[4] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.108      ;
+; -5.069 ; CONTADOR_CLK[1] ; CONTADOR_CLK[13] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.105      ;
+; -5.068 ; CONTADOR_CLK[1] ; CONTADOR_CLK[19] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.104      ;
+; -5.064 ; CONTADOR_CLK[0] ; LED_R            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.102      ;
+; -5.063 ; CONTADOR_CLK[0] ; CONTADOR_CLK[21] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.101      ;
+; -5.062 ; CONTADOR_CLK[0] ; CONTADOR_CLK[20] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.100      ;
+; -5.061 ; CONTADOR_CLK[0] ; CONTADOR_CLK[22] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.099      ;
+; -5.057 ; CONTADOR_CLK[0] ; CONTADOR_CLK[23] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.095      ;
+; -5.057 ; CONTADOR_CLK[0] ; CONTADOR_CLK[25] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.095      ;
+; -5.044 ; CONTADOR_CLK[5] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.081      ;
+; -5.044 ; CONTADOR_CLK[5] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.081      ;
+; -5.044 ; CONTADOR_CLK[5] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.081      ;
+; -5.044 ; CONTADOR_CLK[5] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.081      ;
+; -5.044 ; CONTADOR_CLK[5] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.081      ;
+; -5.040 ; CONTADOR_CLK[5] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.077      ;
+; -5.040 ; CONTADOR_CLK[5] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.077      ;
+; -5.040 ; CONTADOR_CLK[5] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.077      ;
+; -5.040 ; CONTADOR_CLK[5] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.077      ;
+; -5.040 ; CONTADOR_CLK[5] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.077      ;
+; -5.039 ; CONTADOR_CLK[7] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.076      ;
+; -5.039 ; CONTADOR_CLK[7] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.076      ;
+; -5.039 ; CONTADOR_CLK[7] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.076      ;
+; -5.039 ; CONTADOR_CLK[7] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.076      ;
+; -5.039 ; CONTADOR_CLK[7] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.076      ;
+; -5.035 ; CONTADOR_CLK[7] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.072      ;
+; -5.035 ; CONTADOR_CLK[7] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.072      ;
+; -5.035 ; CONTADOR_CLK[7] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.072      ;
+; -5.035 ; CONTADOR_CLK[7] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.072      ;
+; -5.035 ; CONTADOR_CLK[7] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 6.072      ;
+; -5.009 ; CONTADOR_CLK[1] ; CONTADOR_CLK[14] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 6.045      ;
+; -5.007 ; CONTADOR_CLK[4] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 6.045      ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK_IN'                                                                                         ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; LEDS_R[10]       ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; LED_G            ; LED_G            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; LEDS_G[5]        ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; LED_R            ; LED_R            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.524 ; CONTADOR_CLK[31] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.790      ;
+; 0.531 ; LEDS_G[1]        ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.797      ;
+; 0.533 ; LEDS_G[3]        ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.799      ;
+; 0.537 ; LEDS_R[2]        ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.803      ;
+; 0.541 ; LEDS_R[6]        ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.807      ;
+; 0.544 ; LEDS_R[10]       ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.810      ;
+; 0.666 ; LEDS_R[4]        ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.932      ;
+; 0.788 ; CONTADOR_CLK[27] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.054      ;
+; 0.788 ; CONTADOR_CLK[18] ; CONTADOR_CLK[18] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.054      ;
+; 0.792 ; LED_G            ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.058      ;
+; 0.794 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.060      ;
+; 0.794 ; CONTADOR_CLK[16] ; CONTADOR_CLK[16] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.060      ;
+; 0.795 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.061      ;
+; 0.798 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[1]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799 ; CONTADOR_CLK[29] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; CONTADOR_CLK[30] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; CONTADOR_CLK[11] ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.828 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; CONTADOR_CLK[10] ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.094      ;
+; 0.831 ; CONTADOR_CLK[24] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; CONTADOR_CLK[26] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; CONTADOR_CLK[28] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.832 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.098      ;
+; 0.853 ; LEDS_G[4]        ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.119      ;
+; 0.854 ; LEDS_G[2]        ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.120      ;
+; 0.986 ; LED_G            ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.252      ;
+; 1.109 ; LEDS_G[5]        ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.374      ;
+; 1.171 ; CONTADOR_CLK[27] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.437      ;
+; 1.177 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.443      ;
+; 1.178 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.444      ;
+; 1.181 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.447      ;
+; 1.182 ; CONTADOR_CLK[30] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; CONTADOR_CLK[29] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.448      ;
+; 1.209 ; LED_G            ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.474      ;
+; 1.213 ; LED_G            ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.478      ;
+; 1.214 ; CONTADOR_CLK[10] ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.480      ;
+; 1.214 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.480      ;
+; 1.217 ; CONTADOR_CLK[26] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.217 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.217 ; CONTADOR_CLK[28] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.218 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.484      ;
+; 1.242 ; CONTADOR_CLK[27] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.508      ;
+; 1.248 ; CONTADOR_CLK[16] ; CONTADOR_CLK[18] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.514      ;
+; 1.248 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.514      ;
+; 1.249 ; LEDS_R[10]       ; LED_G            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.515      ;
+; 1.249 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.515      ;
+; 1.251 ; LEDS_R[10]       ; LED_R            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.517      ;
+; 1.252 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.518      ;
+; 1.253 ; CONTADOR_CLK[29] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.519      ;
+; 1.285 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.551      ;
+; 1.288 ; CONTADOR_CLK[24] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; CONTADOR_CLK[26] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; CONTADOR_CLK[28] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.554      ;
+; 1.289 ; LED_G            ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.554      ;
+; 1.297 ; LED_G            ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.562      ;
+; 1.297 ; LED_G            ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.562      ;
+; 1.298 ; LED_G            ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.563      ;
+; 1.312 ; LED_G            ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.577      ;
+; 1.313 ; CONTADOR_CLK[27] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.579      ;
+; 1.319 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.585      ;
+; 1.323 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.589      ;
+; 1.348 ; LEDS_R[8]        ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.614      ;
+; 1.356 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.622      ;
+; 1.357 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[1]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.623      ;
+; 1.359 ; CONTADOR_CLK[24] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; CONTADOR_CLK[26] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; CONTADOR_CLK[28] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.625      ;
+; 1.363 ; CONTADOR_CLK[25] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.628      ;
+; 1.377 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.643      ;
+; 1.384 ; CONTADOR_CLK[27] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.650      ;
+; 1.390 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.656      ;
+; 1.394 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.660      ;
+; 1.428 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.694      ;
+; 1.430 ; CONTADOR_CLK[24] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.696      ;
+; 1.430 ; CONTADOR_CLK[26] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.696      ;
+; 1.434 ; CONTADOR_CLK[25] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.699      ;
+; 1.443 ; CONTADOR_CLK[7]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.709      ;
+; 1.448 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.714      ;
+; 1.448 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.714      ;
+; 1.458 ; CONTADOR_CLK[23] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.723      ;
+; 1.465 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.731      ;
+; 1.471 ; CONTADOR_CLK[15] ; CONTADOR_CLK[16] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.001      ; 1.738      ;
+; 1.475 ; LED_G            ; LED_R            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.741      ;
+; 1.479 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.745      ;
+; 1.481 ; CONTADOR_CLK[22] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.746      ;
+; 1.499 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.765      ;
+; 1.501 ; CONTADOR_CLK[24] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.767      ;
+; 1.501 ; CONTADOR_CLK[26] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 1.767      ;
+; 1.505 ; CONTADOR_CLK[25] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 1.770      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK_IN'                                                                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK_IN ; Rise       ; CLK_IN                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[10]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[10]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[11]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[11]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[12]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[12]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[13]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[13]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[14]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[14]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[15]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[15]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[16]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[16]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[17]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[17]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[18]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[18]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[19]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[19]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[20]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[20]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[21]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[21]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[22]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[22]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[23]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[23]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[24]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[24]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[25]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[25]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[26]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[26]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[27]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[27]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[28]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[28]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[29]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[29]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[30]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[30]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[31]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[31]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LED_G                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LED_G                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LED_R                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LED_R                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CONTADOR_CLK[0]|clk     ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 6.717 ; 6.717 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 6.717 ; 6.717 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 6.634 ; 6.634 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 6.629 ; 6.629 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 6.679 ; 6.679 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 6.625 ; 6.625 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 6.576 ; 6.576 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 8.294 ; 8.294 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 8.284 ; 8.284 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 8.294 ; 8.294 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 8.206 ; 8.206 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 6.576 ; 6.576 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 6.717 ; 6.717 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 6.634 ; 6.634 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 6.629 ; 6.629 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 6.679 ; 6.679 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 6.625 ; 6.625 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 6.576 ; 6.576 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 8.284 ; 8.284 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 8.294 ; 8.294 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 8.206 ; 8.206 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; CLK_IN ; -2.109 ; -59.546       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; CLK_IN ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; CLK_IN ; -1.380 ; -47.380              ;
++--------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK_IN'                                                                                        ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; -2.109 ; CONTADOR_CLK[0] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.142      ;
+; -2.109 ; CONTADOR_CLK[0] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.142      ;
+; -2.109 ; CONTADOR_CLK[0] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.142      ;
+; -2.109 ; CONTADOR_CLK[0] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.142      ;
+; -2.109 ; CONTADOR_CLK[0] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.142      ;
+; -2.107 ; CONTADOR_CLK[0] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.140      ;
+; -2.107 ; CONTADOR_CLK[0] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.140      ;
+; -2.107 ; CONTADOR_CLK[0] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.140      ;
+; -2.107 ; CONTADOR_CLK[0] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.140      ;
+; -2.107 ; CONTADOR_CLK[0] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.140      ;
+; -2.053 ; CONTADOR_CLK[0] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 3.087      ;
+; -2.053 ; CONTADOR_CLK[0] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 3.087      ;
+; -2.053 ; CONTADOR_CLK[0] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 3.087      ;
+; -1.994 ; CONTADOR_CLK[1] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.027      ;
+; -1.994 ; CONTADOR_CLK[1] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.027      ;
+; -1.994 ; CONTADOR_CLK[1] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.027      ;
+; -1.994 ; CONTADOR_CLK[1] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.027      ;
+; -1.994 ; CONTADOR_CLK[1] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.027      ;
+; -1.992 ; CONTADOR_CLK[1] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.025      ;
+; -1.992 ; CONTADOR_CLK[1] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.025      ;
+; -1.992 ; CONTADOR_CLK[1] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.025      ;
+; -1.992 ; CONTADOR_CLK[1] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.025      ;
+; -1.992 ; CONTADOR_CLK[1] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 3.025      ;
+; -1.958 ; CONTADOR_CLK[2] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.991      ;
+; -1.958 ; CONTADOR_CLK[2] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.991      ;
+; -1.958 ; CONTADOR_CLK[2] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.991      ;
+; -1.958 ; CONTADOR_CLK[2] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.991      ;
+; -1.958 ; CONTADOR_CLK[2] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.991      ;
+; -1.956 ; CONTADOR_CLK[2] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.989      ;
+; -1.956 ; CONTADOR_CLK[2] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.989      ;
+; -1.956 ; CONTADOR_CLK[2] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.989      ;
+; -1.956 ; CONTADOR_CLK[2] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.989      ;
+; -1.956 ; CONTADOR_CLK[2] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.989      ;
+; -1.953 ; CONTADOR_CLK[0] ; CONTADOR_CLK[13] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.985      ;
+; -1.952 ; CONTADOR_CLK[0] ; CONTADOR_CLK[19] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.984      ;
+; -1.938 ; CONTADOR_CLK[3] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.971      ;
+; -1.938 ; CONTADOR_CLK[3] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.971      ;
+; -1.938 ; CONTADOR_CLK[3] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.971      ;
+; -1.938 ; CONTADOR_CLK[3] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.971      ;
+; -1.938 ; CONTADOR_CLK[3] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.971      ;
+; -1.938 ; CONTADOR_CLK[1] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.972      ;
+; -1.938 ; CONTADOR_CLK[1] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.972      ;
+; -1.938 ; CONTADOR_CLK[1] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.972      ;
+; -1.936 ; CONTADOR_CLK[3] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.969      ;
+; -1.936 ; CONTADOR_CLK[3] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.969      ;
+; -1.936 ; CONTADOR_CLK[3] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.969      ;
+; -1.936 ; CONTADOR_CLK[3] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.969      ;
+; -1.936 ; CONTADOR_CLK[3] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.969      ;
+; -1.902 ; CONTADOR_CLK[2] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.936      ;
+; -1.902 ; CONTADOR_CLK[2] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.936      ;
+; -1.902 ; CONTADOR_CLK[2] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.936      ;
+; -1.898 ; CONTADOR_CLK[0] ; CONTADOR_CLK[14] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.930      ;
+; -1.888 ; CONTADOR_CLK[4] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.921      ;
+; -1.888 ; CONTADOR_CLK[4] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.921      ;
+; -1.888 ; CONTADOR_CLK[4] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.921      ;
+; -1.888 ; CONTADOR_CLK[4] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.921      ;
+; -1.888 ; CONTADOR_CLK[4] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.921      ;
+; -1.886 ; CONTADOR_CLK[4] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.919      ;
+; -1.886 ; CONTADOR_CLK[4] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.919      ;
+; -1.886 ; CONTADOR_CLK[4] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.919      ;
+; -1.886 ; CONTADOR_CLK[4] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.919      ;
+; -1.886 ; CONTADOR_CLK[4] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.919      ;
+; -1.882 ; CONTADOR_CLK[3] ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.916      ;
+; -1.882 ; CONTADOR_CLK[3] ; LED_G            ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.916      ;
+; -1.882 ; CONTADOR_CLK[3] ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.002      ; 2.916      ;
+; -1.869 ; CONTADOR_CLK[5] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.902      ;
+; -1.869 ; CONTADOR_CLK[5] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.902      ;
+; -1.869 ; CONTADOR_CLK[5] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.902      ;
+; -1.869 ; CONTADOR_CLK[5] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.902      ;
+; -1.869 ; CONTADOR_CLK[5] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.902      ;
+; -1.867 ; CONTADOR_CLK[5] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.900      ;
+; -1.867 ; CONTADOR_CLK[5] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.900      ;
+; -1.867 ; CONTADOR_CLK[5] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.900      ;
+; -1.867 ; CONTADOR_CLK[5] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.900      ;
+; -1.867 ; CONTADOR_CLK[5] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.900      ;
+; -1.861 ; CONTADOR_CLK[7] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.894      ;
+; -1.861 ; CONTADOR_CLK[7] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.894      ;
+; -1.861 ; CONTADOR_CLK[7] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.894      ;
+; -1.861 ; CONTADOR_CLK[7] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.894      ;
+; -1.861 ; CONTADOR_CLK[7] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.894      ;
+; -1.859 ; CONTADOR_CLK[7] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.892      ;
+; -1.859 ; CONTADOR_CLK[7] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.892      ;
+; -1.859 ; CONTADOR_CLK[7] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.892      ;
+; -1.859 ; CONTADOR_CLK[7] ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.892      ;
+; -1.859 ; CONTADOR_CLK[7] ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.892      ;
+; -1.851 ; CONTADOR_CLK[0] ; CONTADOR_CLK[12] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.883      ;
+; -1.850 ; CONTADOR_CLK[0] ; CONTADOR_CLK[15] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.882      ;
+; -1.848 ; CONTADOR_CLK[0] ; CONTADOR_CLK[7]  ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.880      ;
+; -1.841 ; CONTADOR_CLK[0] ; CONTADOR_CLK[17] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.873      ;
+; -1.838 ; CONTADOR_CLK[1] ; CONTADOR_CLK[13] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.870      ;
+; -1.837 ; CONTADOR_CLK[1] ; CONTADOR_CLK[19] ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.869      ;
+; -1.836 ; CONTADOR_CLK[0] ; CONTADOR_CLK[0]  ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.000      ; 2.868      ;
+; -1.834 ; CONTADOR_CLK[6] ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.867      ;
+; -1.834 ; CONTADOR_CLK[6] ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.867      ;
+; -1.834 ; CONTADOR_CLK[6] ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.867      ;
+; -1.834 ; CONTADOR_CLK[6] ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.867      ;
+; -1.834 ; CONTADOR_CLK[6] ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.867      ;
+; -1.832 ; CONTADOR_CLK[6] ; LEDS_R[8]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.865      ;
+; -1.832 ; CONTADOR_CLK[6] ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.865      ;
+; -1.832 ; CONTADOR_CLK[6] ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 1.000        ; 0.001      ; 2.865      ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK_IN'                                                                                         ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; LEDS_R[10]       ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LED_G            ; LED_G            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LEDS_G[5]        ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LED_R            ; LED_R            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; CONTADOR_CLK[31] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.393      ;
+; 0.245 ; LEDS_G[3]        ; LEDS_G[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; LEDS_G[1]        ; LEDS_G[0]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; LEDS_R[2]        ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.399      ;
+; 0.251 ; LEDS_R[6]        ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.403      ;
+; 0.253 ; LEDS_R[10]       ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.405      ;
+; 0.321 ; LEDS_R[4]        ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.473      ;
+; 0.354 ; CONTADOR_CLK[27] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.506      ;
+; 0.354 ; CONTADOR_CLK[18] ; CONTADOR_CLK[18] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.506      ;
+; 0.356 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; CONTADOR_CLK[16] ; CONTADOR_CLK[16] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[1]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; CONTADOR_CLK[11] ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; CONTADOR_CLK[29] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; CONTADOR_CLK[30] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.511      ;
+; 0.367 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; CONTADOR_CLK[10] ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; CONTADOR_CLK[24] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; CONTADOR_CLK[26] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; LED_G            ; LEDS_R[10]       ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; CONTADOR_CLK[28] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.522      ;
+; 0.388 ; LEDS_G[4]        ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.540      ;
+; 0.391 ; LEDS_G[2]        ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.543      ;
+; 0.492 ; CONTADOR_CLK[27] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.644      ;
+; 0.494 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; CONTADOR_CLK[30] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; CONTADOR_CLK[29] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.649      ;
+; 0.507 ; CONTADOR_CLK[10] ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; CONTADOR_CLK[26] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; CONTADOR_CLK[28] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.662      ;
+; 0.515 ; LEDS_G[5]        ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.666      ;
+; 0.516 ; LED_G            ; LEDS_G[5]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.668      ;
+; 0.527 ; CONTADOR_CLK[27] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.679      ;
+; 0.529 ; CONTADOR_CLK[16] ; CONTADOR_CLK[18] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.681      ;
+; 0.529 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.681      ;
+; 0.529 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.681      ;
+; 0.530 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; CONTADOR_CLK[9]  ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; CONTADOR_CLK[29] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.684      ;
+; 0.542 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[10] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.694      ;
+; 0.544 ; CONTADOR_CLK[24] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; CONTADOR_CLK[26] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; CONTADOR_CLK[28] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.697      ;
+; 0.547 ; LEDS_R[10]       ; LED_G            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; LEDS_R[10]       ; LED_R            ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.701      ;
+; 0.552 ; LED_G            ; LEDS_R[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.703      ;
+; 0.552 ; LED_G            ; LEDS_R[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.703      ;
+; 0.562 ; CONTADOR_CLK[27] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.714      ;
+; 0.564 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.716      ;
+; 0.565 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[4]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.717      ;
+; 0.575 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[1]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.727      ;
+; 0.577 ; CONTADOR_CLK[8]  ; CONTADOR_CLK[11] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.729      ;
+; 0.577 ; CONTADOR_CLK[25] ; CONTADOR_CLK[26] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.728      ;
+; 0.579 ; CONTADOR_CLK[24] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; CONTADOR_CLK[26] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; CONTADOR_CLK[3]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; CONTADOR_CLK[28] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.732      ;
+; 0.597 ; CONTADOR_CLK[27] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.749      ;
+; 0.599 ; CONTADOR_CLK[2]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.751      ;
+; 0.600 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[5]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.752      ;
+; 0.601 ; LEDS_R[8]        ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.753      ;
+; 0.604 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.756      ;
+; 0.610 ; LED_G            ; LEDS_G[1]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.761      ;
+; 0.610 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[2]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.762      ;
+; 0.612 ; CONTADOR_CLK[25] ; CONTADOR_CLK[27] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.763      ;
+; 0.614 ; CONTADOR_CLK[24] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614 ; CONTADOR_CLK[26] ; CONTADOR_CLK[30] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.766      ;
+; 0.617 ; LED_G            ; LEDS_G[3]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.768      ;
+; 0.617 ; LED_G            ; LEDS_G[4]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.768      ;
+; 0.617 ; LED_G            ; LEDS_R[6]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.768      ;
+; 0.621 ; LED_G            ; LEDS_R[2]        ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.772      ;
+; 0.631 ; CONTADOR_CLK[15] ; CONTADOR_CLK[16] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.001      ; 0.784      ;
+; 0.631 ; CONTADOR_CLK[7]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.783      ;
+; 0.635 ; CONTADOR_CLK[23] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.786      ;
+; 0.635 ; CONTADOR_CLK[1]  ; CONTADOR_CLK[6]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.787      ;
+; 0.639 ; CONTADOR_CLK[6]  ; CONTADOR_CLK[9]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.791      ;
+; 0.639 ; CONTADOR_CLK[5]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.791      ;
+; 0.645 ; CONTADOR_CLK[0]  ; CONTADOR_CLK[3]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.797      ;
+; 0.647 ; CONTADOR_CLK[25] ; CONTADOR_CLK[28] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.798      ;
+; 0.649 ; CONTADOR_CLK[24] ; CONTADOR_CLK[29] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.801      ;
+; 0.649 ; CONTADOR_CLK[26] ; CONTADOR_CLK[31] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.801      ;
+; 0.658 ; CONTADOR_CLK[4]  ; CONTADOR_CLK[8]  ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.000      ; 0.810      ;
+; 0.660 ; CONTADOR_CLK[22] ; CONTADOR_CLK[24] ; CLK_IN       ; CLK_IN      ; 0.000        ; -0.001     ; 0.811      ;
+; 0.664 ; CONTADOR_CLK[17] ; CONTADOR_CLK[18] ; CLK_IN       ; CLK_IN      ; 0.000        ; 0.001      ; 0.817      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK_IN'                                                                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK_IN ; Rise       ; CLK_IN                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[10]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[10]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[11]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[11]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[12]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[12]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[13]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[13]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[14]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[14]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[15]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[15]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[16]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[16]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[17]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[17]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[18]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[18]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[19]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[19]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[20]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[20]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[21]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[21]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[22]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[22]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[23]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[23]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[24]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[24]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[25]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[25]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[26]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[26]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[27]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[27]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[28]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[28]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[29]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[29]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[30]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[30]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[31]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[31]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; CONTADOR_CLK[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; CONTADOR_CLK[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_G[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_G[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LEDS_R[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LEDS_R[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LED_G                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LED_G                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_IN ; Fall       ; LED_R                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_IN ; Fall       ; LED_R                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CLK_IN~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_IN ; Rise       ; CLK_IN~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_IN ; Rise       ; CONTADOR_CLK[0]|clk     ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 3.835 ; 3.835 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 3.835 ; 3.835 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 3.785 ; 3.785 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 3.774 ; 3.774 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 3.783 ; 3.783 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 3.823 ; 3.823 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 3.786 ; 3.786 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 3.729 ; 3.729 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 4.525 ; 4.525 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 4.515 ; 4.515 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 4.525 ; 4.525 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 4.484 ; 4.484 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 3.729 ; 3.729 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 3.835 ; 3.835 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 3.785 ; 3.785 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 3.774 ; 3.774 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 3.783 ; 3.783 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 3.823 ; 3.823 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 3.786 ; 3.786 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 3.729 ; 3.729 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 4.515 ; 4.515 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 4.525 ; 4.525 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 4.484 ; 4.484 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.538   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLK_IN          ; -5.538   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -176.69  ; 0.0   ; 0.0      ; 0.0     ; -47.38              ;
+;  CLK_IN          ; -176.690 ; 0.000 ; N/A      ; N/A     ; -47.380             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 6.717 ; 6.717 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 6.717 ; 6.717 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 6.634 ; 6.634 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 6.629 ; 6.629 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 6.679 ; 6.679 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 6.625 ; 6.625 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 6.576 ; 6.576 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 8.294 ; 8.294 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 6.641 ; 6.641 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 6.613 ; 6.613 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 6.603 ; 6.603 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 6.410 ; 6.410 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 8.284 ; 8.284 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 8.294 ; 8.294 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 7.766 ; 7.766 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 8.206 ; 8.206 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SAIDA_G[*]   ; CLK_IN     ; 3.729 ; 3.729 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[0]  ; CLK_IN     ; 3.835 ; 3.835 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[1]  ; CLK_IN     ; 3.785 ; 3.785 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[2]  ; CLK_IN     ; 3.774 ; 3.774 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[3]  ; CLK_IN     ; 3.783 ; 3.783 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[4]  ; CLK_IN     ; 3.823 ; 3.823 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[5]  ; CLK_IN     ; 3.786 ; 3.786 ; Fall       ; CLK_IN          ;
+;  SAIDA_G[6]  ; CLK_IN     ; 3.729 ; 3.729 ; Fall       ; CLK_IN          ;
+; SAIDA_R[*]   ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[0]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[1]  ; CLK_IN     ; 3.796 ; 3.796 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[2]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[3]  ; CLK_IN     ; 3.764 ; 3.764 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[4]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[5]  ; CLK_IN     ; 3.765 ; 3.765 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[6]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[7]  ; CLK_IN     ; 3.680 ; 3.680 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[8]  ; CLK_IN     ; 4.515 ; 4.515 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[9]  ; CLK_IN     ; 4.525 ; 4.525 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[10] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[11] ; CLK_IN     ; 4.312 ; 4.312 ; Fall       ; CLK_IN          ;
+;  SAIDA_R[12] ; CLK_IN     ; 4.484 ; 4.484 ; Fall       ; CLK_IN          ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK_IN     ; CLK_IN   ; 0        ; 0        ; 0        ; 14919    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK_IN     ; CLK_IN   ; 0        ; 0        ; 0        ; 14919    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 20    ; 20   ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue May 30 19:23:16 2023
+Info: Command: quartus_sta Semaforo -c Semaforo
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Semaforo.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_IN CLK_IN
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.538
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.538      -176.690 CLK_IN 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLK_IN 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -47.380 CLK_IN 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.109
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.109       -59.546 CLK_IN 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK_IN 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -47.380 CLK_IN 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4544 megabytes
+    Info: Processing ended: Tue May 30 19:23:17 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

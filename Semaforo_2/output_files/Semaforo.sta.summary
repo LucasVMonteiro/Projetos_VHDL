@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLK_IN'
-Slack : -6.137
-TNS   : -706.109
+Slack : -7.112
+TNS   : -765.566
 
 Type  : Slow Model Setup 'CLOCK_RED'
-Slack : -3.031
-TNS   : -86.828
+Slack : -3.261
+TNS   : -97.255
 
 Type  : Slow Model Setup 'CLOCK_GREEN'
-Slack : -2.976
-TNS   : -65.486
+Slack : -3.031
+TNS   : -68.737
 
 Type  : Slow Model Hold 'CLK_IN'
-Slack : -2.527
-TNS   : -6.724
+Slack : -2.546
+TNS   : -5.877
 
 Type  : Slow Model Hold 'CLOCK_RED'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLOCK_GREEN'
-Slack : 0.539
+Slack : 0.531
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK_IN'
@@ -39,27 +39,27 @@ Slack : -0.500
 TNS   : -40.000
 
 Type  : Fast Model Setup 'CLK_IN'
-Slack : -2.389
-TNS   : -249.830
+Slack : -2.775
+TNS   : -276.037
 
 Type  : Fast Model Setup 'CLOCK_RED'
-Slack : -0.959
-TNS   : -15.082
+Slack : -1.044
+TNS   : -18.831
 
 Type  : Fast Model Setup 'CLOCK_GREEN'
-Slack : -0.917
-TNS   : -11.786
+Slack : -0.959
+TNS   : -13.634
 
 Type  : Fast Model Hold 'CLK_IN'
-Slack : -1.573
-TNS   : -4.381
+Slack : -1.588
+TNS   : -3.992
 
 Type  : Fast Model Hold 'CLOCK_RED'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_GREEN'
-Slack : 0.246
+Slack : 0.243
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK_IN'
