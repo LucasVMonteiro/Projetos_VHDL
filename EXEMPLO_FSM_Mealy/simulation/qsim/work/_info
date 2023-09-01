@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\EXEMPLO_FSM_Mealy\simulation\qsim
+vFSM_MEALY_1
+Z1 !s100 YPH@_E6^cml]R=23^3]Q63
+Z2 IF?7NfFBJ7bSN@mTze0HDU1
+Z3 V<>QlH0QXz?oK?HTlhdA@l1
+Z4 dC:\Users\vieir\OneDrive\Documentos\GitHub\Projetos_VHDL\EXEMPLO_FSM_Mealy\simulation\qsim
+Z5 w1693524388
+Z6 8fsm_mealy.vo
+Z7 Ffsm_mealy.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|fsm_mealy.vo|
+Z10 o-work work -O0
+Z11 n@f@s@m_@m@e@a@l@y_1
+Z12 !s108 1693524388.882000
+Z13 !s107 fsm_mealy.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vFSM_MEALY_1_vlg_check_tst
+Z14 !s100 a3?FFcQB6Z=_@geNl[7F82
+Z15 IZlC<fkAeLi2Z>o[^^6BT_0
+Z16 VG>5IQAWN<?[l0Ue^OU<jZ0
+R4
+Z17 w1693524387
+Z18 8fsm_mealy.vt
+Z19 Ffsm_mealy.vt
+L0 59
+R8
+r1
+31
+Z20 !s108 1693524388.942000
+Z21 !s107 fsm_mealy.vt|
+Z22 !s90 -work|work|fsm_mealy.vt|
+R10
+Z23 n@f@s@m_@m@e@a@l@y_1_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vFSM_MEALY_1_vlg_sample_tst
+Z24 !s100 E6dVVb;=GdCTVn][G?M`c2
+Z25 IP1jC_zWVd=Gc0[a_l9@LQ3
+Z26 VVNmjN0XgkMhS^P0WcEo]50
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+31
+R20
+R21
+R22
+R10
+Z27 n@f@s@m_@m@e@a@l@y_1_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vFSM_MEALY_1_vlg_vec_tst
+Z28 !s100 _a6lZTJM<lBLeNb2jlXQT0
+Z29 IJN=P@<@QBZeQIDTXhb^H^3
+Z30 V19GTVgN2mjJDP5Km251R<0
+R4
+R17
+R18
+R19
+Z31 L0 154
+R8
+r1
+31
+R20
+R21
+R22
+R10
+Z32 n@f@s@m_@m@e@a@l@y_1_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vFSM_MEALY_2
+Z33 IAcXYndd;XL47T_8Y3l]]f0
+Z34 V:2?35S1`a6l3njYWG_<Hb1
+R4
+Z35 w1693525773
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z36 n@f@s@m_@m@e@a@l@y_2
+!i10b 1
+Z37 !s100 :6Ph^6n_lTYkg:OGo;@`B0
+!s85 0
+Z38 !s108 1693525774.420000
+R13
+!s101 -O0
+vFSM_MEALY_2_vlg_check_tst
+!i10b 1
+!s100 N>0`_jSShnD:]UQ[7ZKFI1
+Imd]lbTa6z>AkHB9UB0DFl2
+V<[1YPJ1F@NEcaPLZTWl8b2
+R4
+Z39 w1693525772
+R18
+R19
+L0 61
+R8
+r1
+!s85 0
+31
+Z40 !s108 1693525774.479000
+Z41 !s107 fsm_mealy.vt|
+R22
+!s101 -O0
+R10
+n@f@s@m_@m@e@a@l@y_2_vlg_check_tst
+vFSM_MEALY_2_vlg_sample_tst
+!i10b 1
+!s100 ^J?0XG1]m?^ZL[F6e]jTI2
+I9_Gee9@Wg?TnJKLLKi]IP3
+V0mB_k8EAmK_KFSTSOm:NF3
+R4
+R39
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R40
+R41
+R22
+!s101 -O0
+R10
+n@f@s@m_@m@e@a@l@y_2_vlg_sample_tst
+vFSM_MEALY_2_vlg_vec_tst
+!i10b 1
+!s100 PA=KM_K@0R;>j@haaH4MJ0
+IY>j^82UBXdP`fUdK:JhSi2
+Vz_PNMTbRZzj0VS>G^UIA<1
+R4
+R39
+R18
+R19
+L0 156
+R8
+r1
+!s85 0
+31
+R40
+R41
+R22
+!s101 -O0
+R10
+n@f@s@m_@m@e@a@l@y_2_vlg_vec_tst

@@ -1,0 +1,94 @@
+ENTITY lcd_driver IS
+	GENERIC (clk_divider: INTEGER := 50000); -- 25MHz to 500Hz
+	PORT(
+	
+			);
+END lcd_driver;
+
+ARCHITECTURE logic OF lcd_driver IS
+	TYPE state IS (FunctionSet1, FunctionSet2, FunctionSet3,
+			FunctionSet4, ClearDisplay, DisplayControl, EntryMode,
+			WriteData1, WriteData2, WriteData3, WriteData4, ReturnHome);
+	SIGNAL pr_state, nx_state: state;
+	
+BEGIN
+
+	PROCESS(clk)
+		VARIABLE count: INTEGER RANGE 0 TO clk_divider;
+	BEGIN
+		IF(clk'EVENT AND clk='1') THEN
+			count := count +1;
+			IF(count=clk_divider) THEN	
+				E <= NOT E;
+				count := 0;
+			END IF;
+		END IF;
+	END PROCESS;
+	----- Lower section of FSM: --------------------
+	PROCESS(E)
+	BEGIN
+		IF (E'EVENT AND E='1') THEN
+			IF(rst='1') THEN
+				pr_state <= FunctionSet1;
+			ELSE
+				pr_state <= nx_state;
+			END IF;
+		END IF;	
+	END PROCESS;
+	----- Upper section of FSM: --------------------
+	PROCESS(pr_state)
+	BEGIN
+		CASE pr_state IS
+			WHEN FunctionSet1 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+			WHEN FunctionSet2 =>
+				RS <= '0'; RW <= '0';
+				DB <= "00111000"
+				nx_state <= FunctionSet2;
+		END CASE;
+	END PROCESS;
+END logic;	
+END logic;	
+	

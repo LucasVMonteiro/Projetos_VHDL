@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -3.325
+TNS   : -31.271
+
+Type  : Slow Model Setup 'pr_state.WriteData1'
+Slack : -1.127
+TNS   : -4.121
+
+Type  : Slow Model Setup 'E~reg0'
+Slack : -0.692
+TNS   : -1.382
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.549
+TNS   : -2.549
+
+Type  : Slow Model Hold 'E~reg0'
+Slack : -1.977
+TNS   : -3.248
+
+Type  : Slow Model Hold 'pr_state.WriteData1'
+Slack : 0.812
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -19.380
+
+Type  : Slow Model Minimum Pulse Width 'E~reg0'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Slow Model Minimum Pulse Width 'pr_state.WriteData1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.949
+TNS   : -6.318
+
+Type  : Fast Model Setup 'E~reg0'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast Model Setup 'pr_state.WriteData1'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.592
+TNS   : -1.592
+
+Type  : Fast Model Hold 'E~reg0'
+Slack : -1.234
+TNS   : -2.167
+
+Type  : Fast Model Hold 'pr_state.WriteData1'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -19.380
+
+Type  : Fast Model Minimum Pulse Width 'E~reg0'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Minimum Pulse Width 'pr_state.WriteData1'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

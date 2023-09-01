@@ -1,0 +1,41 @@
+|lcd_driver
+clk => E~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+RS <= RS.DB_MAX_OUTPUT_PORT_TYPE
+RW <= <GND>
+E << E~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DB[0] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+DB[1] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+DB[2] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+DB[3] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+DB[4] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+DB[5] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+DB[6] <= DB.DB_MAX_OUTPUT_PORT_TYPE
+DB[7] <= DB[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
